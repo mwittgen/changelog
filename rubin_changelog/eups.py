@@ -3,7 +3,12 @@ from concurrent.futures.thread import ThreadPoolExecutor
 import requests
 import urllib3
 from bs4 import BeautifulSoup
-from sortedcontainers import SortedDict
+from sortedcontainers import SortedDict, SortedList
+
+import logging
+
+
+log = logging.getLogger(__name__)
 
 
 class EupsData:
@@ -59,7 +64,7 @@ class EupsData:
         urls = self._get_url_paths()
         result = SortedDict()
         release_list = SortedDict()
-        product_list = list()
+        product_list = SortedList()
         url_list = list()
         for url in urls:
             name = url.split('/')[-1]
@@ -75,7 +80,7 @@ class EupsData:
                 try:
                     data = future.result()
                 except Exception as exc:
-                    print("failed")
+                    log.error("Failed")
                 else:
                     if 'name' in data:
                         name = data['name']
@@ -85,6 +90,6 @@ class EupsData:
             for entry in release_list[r]:
                 name = entry["package"]
                 if name not in product_list:
-                    product_list.append(name)
+                    product_list.add(name)
         result["products"] = product_list
         return result

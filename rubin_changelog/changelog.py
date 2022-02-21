@@ -4,14 +4,23 @@ import logging
 import re
 from concurrent.futures.thread import ThreadPoolExecutor
 from copy import deepcopy
+from enum import Enum
 
 from dateutil.parser import parse
 from sortedcontainers import SortedDict, SortedList
 
 from rubin_changelog.github import GitHubData
+from rubin_changelog.eups import EupsData
+from rubin_changelog.rst import Writer
+from rubin_changelog.jira import JiraData
+
+log = logging.getLogger("changelog")
 
 
-log = logging.getLogger(__name__)
+class Type(Enum):
+    Weekly = 1
+    Release = 2
+
 
 class ChangeLog:
     def __init__(self, eups_data: SortedDict, max_workers=5):
@@ -62,7 +71,7 @@ class ChangeLog:
             for future in concurrent.futures.as_completed(futures):
                 try:
                     data = future.result()
-                except Exception as exc:
+                except Exception:
                     log.error("Fetch failed")
                 else:
                     repo = data["repo"]
@@ -130,3 +139,25 @@ class ChangeLog:
                         'product': pkg, 'title': title, 'date': merged_at, 'ticket': ticket
                     })
         return result
+
+    @staticmethod
+    def create_changelog(release: Type):
+        prefix = ''
+        if release == Type.Weekly:
+            prefix = 'w'
+        log.info("Fetching EUPS data")
+        eups = EupsData()
+        eups_data = eups.get_releases(prefix + '_')
+        change_log = ChangeLog(eups_data)
+        package_diff = change_log.get_package_diff()
+        products = eups_data['products']
+        log.info("Fetching JIRA ticket data")
+        jira = JiraData()
+        jira_data = jira.get_tickets()
+        log.info("Fetching GitHub repo data")
+        repos = change_log.get_package_repos(products, prefix + '.')
+        log.info("Processing changelog data")
+        repo_data = change_log.get_merged_tickets(repos)
+        log.info("Writing RST files")
+        writer = Writer("source/weekly")
+        writer.write(jira_data, repo_data, package_diff, products)

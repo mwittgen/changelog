@@ -7,6 +7,13 @@ Weekly Releases
 ===============
 
 .. toctree::
+    :maxdepth: 1
+   :caption: Products
+   :hidden:
+
+   weekly/products
+
+.. toctree::
    :maxdepth: 1
    :caption: main
    :hidden:
@@ -20,7 +27,7 @@ Weekly Releases
    :hidden:
    :reversed:
 
-   weekly/w.*
+   weekly/w_*
    
    
 
