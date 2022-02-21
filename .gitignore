@@ -1,5 +1,5 @@
 venv
-sources/weekly
+source/weekly/
 build
 __pycache__
 .idea
