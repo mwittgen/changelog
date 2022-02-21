@@ -70,7 +70,7 @@ class GitHubData:
             """)
         res = self._query(query, "repositoryOwner", "repositories")
         for r in res:
-            result.append(r["name"])
+            result.append(r["name"].lower())
         return result
 
     def get_tags(self, repo: str, name: str) -> list:

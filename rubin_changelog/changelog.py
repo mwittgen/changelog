@@ -9,10 +9,10 @@ from enum import Enum
 from dateutil.parser import parse
 from sortedcontainers import SortedDict, SortedList
 
-from rubin_changelog.github import GitHubData
 from rubin_changelog.eups import EupsData
-from rubin_changelog.rst import Writer
+from rubin_changelog.github import GitHubData
 from rubin_changelog.jira import JiraData
+from rubin_changelog.rst import Writer
 
 log = logging.getLogger("changelog")
 
