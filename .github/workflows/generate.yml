@@ -29,6 +29,7 @@ jobs:
               with:
                 target_branch: gh-pages
                 build_dir: build/html
+                fqdn: mwittgen.github.io
                 jekyll: false
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
