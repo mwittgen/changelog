@@ -24,7 +24,7 @@ jobs:
                 python git_changelog.py
                 make html
               env:
-                GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
+                AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
             - name: Deploy to GitHub Pages
               if: success()
               uses: crazy-max/ghaction-github-pages@v2
