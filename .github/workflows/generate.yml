@@ -12,14 +12,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - uses: actions/setup-python@v2
+            - uses: actions/setup-python@v2i
+            - uses: octokit/graphql-action@v2.x
               with:
                 python-version: 3.8
             - name: Install dependencies
               run: |
                 python -m pip install --upgrade pip
                 python -m pip install -r requirements.txt 
-            - name: Create Chanelog 
+            - name: Create Changelog 
               run: |
                 python git_changelog.py
                 make html
