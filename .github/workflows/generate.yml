@@ -33,3 +33,4 @@ jobs:
                 jekyll: false
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
