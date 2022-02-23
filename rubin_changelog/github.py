@@ -8,7 +8,7 @@ from .tag import *
 
 class GitHubData:
     def __init__(self):
-        token = os.getenv('GITHUB_TOKEN')
+        token = os.getenv('AUTH_TOKEN')
         self._headers = {"Authorization": f"Bearer {token}"}
         self._transport = AIOHTTPTransport(
             url='https://api.github.com/graphql', headers=self._headers)
