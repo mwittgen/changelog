@@ -14,6 +14,7 @@ class Writer:
 
     def write_products(self, products: SortedList, ncols: int = 5) -> None:
         products_len = len(products)
+        url = 'https://github.com/lsst/'
         cols = list()
         for i in range(products_len // ncols +
                        (products_len % ncols) // ncols):
@@ -21,7 +22,9 @@ class Writer:
             for j in range(ncols):
                 index = i * ncols + j
                 if index < products_len:
-                    rows.append(products[index])
+                    product = products[index]
+                    link = f'`{product} <{url}{product}>`_'
+                    rows.append(link)
                 else:
                     rows.append('')
             cols.append(rows)
@@ -40,8 +43,12 @@ class Writer:
             rtag = Tag(tag)
             name = rtag.rel_name()
             weekly_flag = rtag.is_weekly()
-            if rtag in eups_diff or name == 'main':
-                index.add(rtag)
+            # always add weekly tag and main
+            if not(rtag in eups_diff
+                   or name == 'main'
+                   or rtag.is_weekly()):
+                continue
+            index.add(rtag)
             pkg_table = list()
             doc.h2(name)
             doc.newline()

@@ -3,7 +3,6 @@ import datetime
 import logging
 from concurrent.futures.thread import ThreadPoolExecutor
 from copy import deepcopy
-from pprint import pprint
 
 from dateutil.parser import parse
 from sortedcontainers import SortedDict, SortedList
@@ -12,7 +11,6 @@ from rubin_changelog.eups import EupsData
 from rubin_changelog.github import GitHubData
 from rubin_changelog.jira import JiraData
 from rubin_changelog.rst import Writer
-
 from .tag import *
 
 log = logging.getLogger("changelog")
@@ -21,6 +19,7 @@ log = logging.getLogger("changelog")
 class ChangeLog:
     def __init__(self, eups_data: SortedDict, max_workers: int = 5):
         self.eups_data = eups_data
+        self._merge_cache = None
         self._max_workers = max_workers
 
     def get_package_diff(self) -> SortedDict:
@@ -150,7 +149,6 @@ class ChangeLog:
         jira_data = jira.get_tickets()
         log.info("Fetching GitHub repo data")
         repos = change_log.get_package_repos(products, release)
-        #repos = change_log.get_package_repos(SortedList(['afw', 'base']), release)
         log.info("Processing changelog data")
         repo_data = change_log.get_merged_tickets(repos)
         log.info("Writing RST files")

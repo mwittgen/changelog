@@ -4,7 +4,8 @@ Rubin Release ChangeLog
 .. toctree::
    :maxdepth: 2 
    :caption: Release ChangeLog
-   
+   :hidden:
+
    weekly/index
    releases/index
 

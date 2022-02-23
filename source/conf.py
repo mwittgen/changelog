@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'lsst_git_changelog'
-copyright = '2022, lsst'
+copyright = '2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA).'
 author = 'lsst'
 
 
