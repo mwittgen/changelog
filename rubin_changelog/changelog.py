@@ -137,11 +137,11 @@ class ChangeLog:
         return result
 
     @staticmethod
-    def create_changelog(release: ReleaseType):
+    def create_changelog(release: ReleaseType, max_workers: int = 5):
         log.info("Fetching EUPS data")
         eups = EupsData()
         eups_data = eups.get_releases(release)
-        change_log = ChangeLog(eups_data)
+        change_log = ChangeLog(eups_data, max_workers)
         package_diff = change_log.get_package_diff()
         products = eups_data['products']
         log.info("Fetching JIRA ticket data")
