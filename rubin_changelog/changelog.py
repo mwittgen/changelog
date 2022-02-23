@@ -1,10 +1,9 @@
 import concurrent
 import datetime
 import logging
-import re
 from concurrent.futures.thread import ThreadPoolExecutor
 from copy import deepcopy
-from enum import Enum
+from pprint import pprint
 
 from dateutil.parser import parse
 from sortedcontainers import SortedDict, SortedList
@@ -14,16 +13,13 @@ from rubin_changelog.github import GitHubData
 from rubin_changelog.jira import JiraData
 from rubin_changelog.rst import Writer
 
+from .tag import *
+
 log = logging.getLogger("changelog")
 
 
-class Type(Enum):
-    Weekly = 1
-    Release = 2
-
-
 class ChangeLog:
-    def __init__(self, eups_data: SortedDict, max_workers=5):
+    def __init__(self, eups_data: SortedDict, max_workers: int = 5):
         self.eups_data = eups_data
         self._max_workers = max_workers
 
@@ -42,7 +38,7 @@ class ChangeLog:
         return result
 
     @staticmethod
-    def _fetch(repo: str, tag: str) -> dict:
+    def _fetch(repo: str, tag: ReleaseType) -> dict:
         log.info("Fetching %s", repo)
         gh = GitHubData()
         result = dict()
@@ -54,7 +50,7 @@ class ChangeLog:
         del gh
         return result
 
-    def get_package_repos(self, products: SortedList, tag: str) -> SortedDict:
+    def get_package_repos(self, products: SortedList, tag: ReleaseType) -> SortedDict:
         result = SortedDict()
         result['pulls'] = SortedDict()
         result["tags"] = SortedDict()
@@ -100,7 +96,8 @@ class ChangeLog:
             pulls = pull_list[pkg]
             tags = tag_list[pkg]
             for tag in tags:
-                name = tag["name"]
+                rtag = Tag(tag['name'])
+                name = rtag.rel_name()
                 if name not in result:
                     result[name] = dict()
                     result[name]['tickets'] = list()
@@ -125,11 +122,11 @@ class ChangeLog:
                         })
                     else:
                         break
-
             for merged_at in pulls:
                 title = pulls[merged_at]
                 date = datetime.datetime.now().isoformat()
                 ticket = self._ticket_number(title)
+                # use ~main for sorting to put it after any other tag
                 if '~main' not in result:
                     result['~main'] = dict()
                     result['~main']['tickets'] = list()
@@ -141,13 +138,10 @@ class ChangeLog:
         return result
 
     @staticmethod
-    def create_changelog(release: Type):
-        prefix = ''
-        if release == Type.Weekly:
-            prefix = 'w'
+    def create_changelog(release: ReleaseType):
         log.info("Fetching EUPS data")
         eups = EupsData()
-        eups_data = eups.get_releases(prefix + '_')
+        eups_data = eups.get_releases(release)
         change_log = ChangeLog(eups_data)
         package_diff = change_log.get_package_diff()
         products = eups_data['products']
@@ -155,9 +149,14 @@ class ChangeLog:
         jira = JiraData()
         jira_data = jira.get_tickets()
         log.info("Fetching GitHub repo data")
-        repos = change_log.get_package_repos(products, prefix + '.')
+        repos = change_log.get_package_repos(products, release)
+        #repos = change_log.get_package_repos(SortedList(['afw', 'base']), release)
         log.info("Processing changelog data")
         repo_data = change_log.get_merged_tickets(repos)
         log.info("Writing RST files")
-        writer = Writer("source/weekly")
-        writer.write(jira_data, repo_data, package_diff, products)
+        outputdir = 'source/releases'
+        if release == ReleaseType.WEEKLY:
+            outputdir = 'source/weekly'
+        writer = Writer(outputdir)
+        writer.write_products(products)
+        writer.write_releaes(jira_data, repo_data, package_diff)

@@ -3,6 +3,8 @@ from gql.transport.aiohttp import AIOHTTPTransport
 from sortedcontainers import SortedDict
 import os
 
+from .tag import *
+
 
 class GitHubData:
     def __init__(self):
@@ -11,6 +13,7 @@ class GitHubData:
         self._transport = AIOHTTPTransport(
             url='https://api.github.com/graphql', headers=self._headers)
         self._client = Client(transport=self._transport)
+        self._cached_tags = None
 
     def _query(self, query: gql, w1: str, w2: str) -> list:
         result = list()
@@ -73,7 +76,7 @@ class GitHubData:
             result.append(r["name"].lower())
         return result
 
-    def get_tags(self, repo: str, name: str) -> list:
+    def get_tags(self, repo: str, release: ReleaseType) -> list:
         query = gql(
             """
             query tag_list($cursor: String)
@@ -104,6 +107,7 @@ class GitHubData:
         tags = list()
         result = self._query(query, "repository", "refs")
         for r in result:
-            if r["name"].startswith(name):
+            rtag = Tag(r["name"])
+            if rtag.is_valid() and matches_release(rtag, release):
                 tags.append(r)
         return tags

@@ -1,12 +1,15 @@
 import concurrent
 from concurrent.futures.thread import ThreadPoolExecutor
+from pprint import pprint
+
 import requests
 import urllib3
 from bs4 import BeautifulSoup
 from sortedcontainers import SortedDict, SortedList
 
-import logging
+from .tag import *
 
+import logging
 
 log = logging.getLogger(__name__)
 
@@ -53,14 +56,15 @@ class EupsData:
     def _download(self, url: str) -> SortedDict:
         response = self._connection_mgr.request('GET', url)
         name = url.split('/')[-1].split('.')[0]
-        if response.status == 200:
-            return SortedDict({'name': name,
+        rtag = Tag(name)
+        if response.status == 200 and rtag.is_valid():
+            return SortedDict({'name': rtag,
                                'data': self._process_list(response.data)
                                })
         else:
             return SortedDict()
 
-    def get_releases(self, release: str):
+    def get_releases(self, release: ReleaseType):
         urls = self._get_url_paths()
         result = SortedDict()
         release_list = SortedDict()
@@ -68,8 +72,11 @@ class EupsData:
         url_list = list()
         for url in urls:
             name = url.split('/')[-1]
-            if not name.startswith(release) \
-                    or name.endswith('_latest'):
+            name = name.replace('.list','')
+            rtag = Tag(name)
+            if not rtag.is_valid():
+                continue
+            if not matches_release(rtag, release):
                 continue
             url_list.append(url)
 
