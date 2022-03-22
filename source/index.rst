@@ -2,7 +2,7 @@ Rubin Release ChangeLog
 =======================
 
 .. toctree::
-   :maxdepth: 2 
+   :maxdepth: 1
    :caption: Release ChangeLog
    :hidden:
 
@@ -11,9 +11,3 @@ Rubin Release ChangeLog
 
 - :doc:`weekly/index`
 - :doc:`releases/index`
-
-
-   
-   
-
-
