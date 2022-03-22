@@ -1,30 +1,74 @@
+#
+# Developed for the LSST Data Management System.
+# This product includes software developed by the LSST Project
+# (https://www.lsst.org).
+# See the COPYRIGHT file at the top-level directory of this distribution
+# for details of code ownership.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 import concurrent
 import datetime
 import logging
+import re
 from concurrent.futures.thread import ThreadPoolExecutor
 from copy import deepcopy
+from typing import Dict
 
 from dateutil.parser import parse
 from sortedcontainers import SortedDict, SortedList
 
-from rubin_changelog.eups import EupsData
-from rubin_changelog.github import GitHubData
-from rubin_changelog.jira import JiraData
-from rubin_changelog.rst import Writer
-from .tag import *
+from .eups import EupsData
+from .github import GitHubData
+from .jira import JiraData
+from .rst import Writer
+from .tag import Tag, ReleaseType, matches_release
 
 log = logging.getLogger("changelog")
 
 
 class ChangeLog:
-    def __init__(self, eups_data: SortedDict, max_workers: int = 5):
-        self.eups_data = eups_data
-        self._merge_cache = None
+    """class to retrieve and store changelog data"""
+
+    def __init__(self, max_workers: int = 5):
+        """
+        :param max_workers: `int`
+            max number of parallel worker threads to query GitHub data
+        """
+        self._github_cache = None
         self._max_workers = max_workers
 
-    def get_package_diff(self) -> SortedDict:
+    @staticmethod
+    def get_package_diff(release: ReleaseType) -> SortedDict:
+        """Retrieve added/removed products
+
+        Parameters
+        ----------
+        release: `ReleaseType`
+            release type: WEEKLY or REGULAR
+
+        Returns
+        -------
+        packages: `SortedDict`
+            sorted dict of release name with lists of
+            added and removed packages
+
+        """
+        eups = EupsData()
+        eups_data = eups.get_releases(release)
         result = SortedDict()
-        releases = self.eups_data['releases']
+        releases = eups_data['releases']
         last_release = None
         for r in releases:
             if last_release is not None:
@@ -37,19 +81,45 @@ class ChangeLog:
         return result
 
     @staticmethod
-    def _fetch(repo: str, tag: ReleaseType) -> dict:
+    def _fetch(repo: str) -> Dict:
+        """helper function to fetch repo data
+
+        Parameters
+        ----------
+        repo: `str`
+            name of GitHub repo
+
+        Returns
+        -------
+        _fetch: `Dict`
+            dictionary with pulls and tags of a given repo
+
+        """
         log.info("Fetching %s", repo)
         gh = GitHubData()
         result = dict()
         pulls = gh.get_pull_requests(repo)
-        tags = gh.get_tags(repo, tag)
+        tags = gh.get_tags(repo)
         result["repo"] = repo
         result["pulls"] = pulls
         result["tags"] = tags
         del gh
         return result
 
-    def get_package_repos(self, products: SortedList, tag: ReleaseType) -> SortedDict:
+    def _get_package_repos(self, products: SortedList) -> SortedDict:
+        """retrieve repos for a list of products
+
+        Parameters
+        ----------
+        products: `SortedList`
+            sorted list of products
+
+        Returns
+        -------
+        repos: `SortedDict`
+            package repo data
+
+        """
         result = SortedDict()
         result['pulls'] = SortedDict()
         result["tags"] = SortedDict()
@@ -62,7 +132,7 @@ class ChangeLog:
                 repo_list.add(product)
         with ThreadPoolExecutor(
                 max_workers=self._max_workers) as executor:
-            futures = {executor.submit(self._fetch, repo, tag): repo for repo in repo_list}
+            futures = {executor.submit(self._fetch, repo): repo for repo in repo_list}
             for future in concurrent.futures.as_completed(futures):
                 try:
                     data = future.result()
@@ -74,24 +144,84 @@ class ChangeLog:
                     result["tags"][repo] = data["tags"]
         return result
 
+    def get_package_repos(self, products: SortedList, release: ReleaseType) -> SortedDict:
+        """Retrieves tag and pull information from GitHub
+
+        Parameters
+        ----------
+        products : `SortedList`
+            list of GitHub repos
+        release : `ReleaseType`
+            release type WEEKLY or REGULAR
+
+        Returns
+        -------
+        repos: `SortedDict`
+            sorted dictionary with the release name
+            as key containing all tags and pulls
+
+        """
+        if self._github_cache is None:
+            self._github_cache = self._get_package_repos(products)
+        else:
+            log.info("Using cached github data")
+        cache = self._github_cache
+        result = SortedDict()
+        result["tags"] = SortedDict()
+        result['pulls'] = cache['pulls']
+        repo_result = SortedDict()
+        for repo in cache['tags']:
+            repo_result[repo] = list()
+            for tag in cache['tags'][repo]:
+                rtag = Tag(tag["name"])
+                if rtag.is_valid() and matches_release(rtag, release):
+                    repo_result[repo].append(tag)
+        result["tags"] = repo_result
+        return result
+
     @staticmethod
     def _ticket_number(title: str) -> int:
-        match = re.search(r'DM[\s*|-]\d+', title.upper())
+        """helper function to map a JIRA ticket string to an integer
+
+        Parameters
+        ----------
+        title: `str`
+            JIRA ticket string, DM-XXXXXX
+
+        Returns
+        -------
+            ticket number : `int`
+                numeric part of DM-XXXXXX
+
+        """
+        match = re.search(r'DM[\s*|-](\d+)', title.upper())
         ticket = None
         if match:
-            res = re.findall(r"DM[\s|-]*(\d+)", match[0])
-            if len(res) == 1:
-                ticket = res[0]
+            ticket = int(match[1])
         return ticket
 
-    def get_merged_tickets(self, repos) -> SortedDict:
+    def get_merged_tickets(self, repos: Dict, package_diff: SortedDict) -> SortedDict:
+        """Process all repo data and create a merged ticket dict
+
+        Parameters
+        ----------
+        repos : `Dict`
+            repo dictionary
+        package_diff : `SortedDict`
+            added/removed by release
+
+        Returns
+        -------
+        merged tickets : `SortedDict`
+            sorted dictionary of merged tickets
+
+        """
         pull_list = repos['pulls']
         tag_list = repos['tags']
         result = SortedDict()
         last_tag_date = None
         for pkg in tag_list:
-
-            log.info("processing %s" % pkg)
+            log.info("Processing %s", pkg)
             pulls = pull_list[pkg]
             tags = tag_list[pkg]
             for tag in tags:
@@ -116,9 +246,11 @@ class ChangeLog:
                     if pull_date <= tag_date:
                         ticket = self._ticket_number(title)
                         del pulls[merged_at]
-                        result[name]['tickets'].append({
-                            'product': pkg, 'title': title, 'date': merged_at, 'ticket': ticket
-                        })
+                        # skip all pulls before package was added
+                        if not(rtag in package_diff and pkg in package_diff[rtag]["added"]):
+                            result[name]['tickets'].append({
+                                'product': pkg, 'title': title, 'date': merged_at, 'ticket': ticket
+                            })
                     else:
                         break
             for merged_at in pulls:
@@ -136,25 +268,34 @@ class ChangeLog:
                     })
         return result
 
-    @staticmethod
-    def create_changelog(release: ReleaseType, max_workers: int = 5):
+    def create_changelog(self, release: ReleaseType) -> None:
+        """Process data sources and Write RST changelog files
+
+        Parameters
+        ----------
+        release: `ReleaseType`
+            release type: WEEKLY or REGULAR
+
+        Returns
+        -------
+
+        """
         log.info("Fetching EUPS data")
         eups = EupsData()
         eups_data = eups.get_releases(release)
-        change_log = ChangeLog(eups_data, max_workers)
-        package_diff = change_log.get_package_diff()
+        package_diff = self.get_package_diff(release)
         products = eups_data['products']
         log.info("Fetching JIRA ticket data")
         jira = JiraData()
         jira_data = jira.get_tickets()
         log.info("Fetching GitHub repo data")
-        repos = change_log.get_package_repos(products, release)
+        repos = self.get_package_repos(products, release)
         log.info("Processing changelog data")
-        repo_data = change_log.get_merged_tickets(repos)
+        repo_data = self.get_merged_tickets(repos, package_diff)
         log.info("Writing RST files")
         outputdir = 'source/releases'
         if release == ReleaseType.WEEKLY:
             outputdir = 'source/weekly'
         writer = Writer(outputdir)
         writer.write_products(products)
-        writer.write_releaes(jira_data, repo_data, package_diff)
+        writer.write_releases(jira_data, repo_data, package_diff)
