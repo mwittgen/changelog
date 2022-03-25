@@ -30,7 +30,7 @@ class GitHubData:
     """Query GitHub repo data"""
 
     def __init__(self):
-        token = os.getenv('GITHUB_TOKEN')
+        token = os.getenv('AUTH_TOKEN')
         headers = {"Authorization": f"Bearer {token}"}
         transport = AIOHTTPTransport(
             url='https://api.github.com/graphql', headers=headers)
