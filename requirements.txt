@@ -4,8 +4,8 @@ gql
 requests
 urllib3
 rstcloth
-Sphinx
-sphinx-rtd-theme
+Sphinx==4.4.0
+sphinx-rtd-theme==1.0.0
 sortedcontainers
 python-dateutil
 flake8
