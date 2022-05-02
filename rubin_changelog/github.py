@@ -172,7 +172,7 @@ class GitHubData:
                   nodes {
                     name
                     target {
-                      ... on Tag { 
+                      ... on Tag {
                         tagger { date }
                         target { ... on Commit {committedDate}}
                       }

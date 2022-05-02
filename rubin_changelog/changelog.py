@@ -274,8 +274,7 @@ class ChangeLog:
                             if last_branch == branch:
                                 result[name]['tickets'].append({
                                     'product': pkg, 'title': title,
-                                    'date': merged_at, 'ticket': ticket
-                                 })
+                                    'date': merged_at, 'ticket': ticket})
                     else:
                         break
                 if is_first and is_branched:
@@ -316,7 +315,6 @@ class ChangeLog:
         eups_data = eups.get_releases(release)
         package_diff = self.get_package_diff(release)
         products = eups_data['products']
-        #products = SortedList(['afw', 'pipe_tasks', 'lsst', 'lsst_obs'])
         log.info("Fetching JIRA ticket data")
         jira = JiraData()
         jira_data = jira.get_tickets()

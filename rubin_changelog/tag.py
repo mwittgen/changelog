@@ -167,7 +167,6 @@ class Tag:
     def __hash__(self) -> int:
         return self._hash
 
-
     def tag_branch(self) -> str:
         """Tag branch string of a tag
 
@@ -179,7 +178,7 @@ class Tag:
         """
         result = ""
         if self.is_regular():
-            result = f"%d.%d.x" % (self._major, self._minor)
+            result = "%d.%d.x" % (self._major, self._minor)
         return result
 
     def is_first_release_tag(self) -> bool:
@@ -193,7 +192,7 @@ class Tag:
         """
         result = False
         if self.is_regular():
-            result=self._minor == 0 and self._patch == 0 and self._rc == 1
+            result = self._minor == 0 and self._patch == 0 and self._rc == 1
         return result
 
 
