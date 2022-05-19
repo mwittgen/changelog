@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v22_0_0_rc1 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v21_0_0" href="v21_0_0.html" />
+    <link rel="prev" title="v22_0_0_rc2" href="v22_0_0_rc2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v22_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0.html">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0.html">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v14_0.html">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1_rc1.html">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_rc1.html">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v22_0_0_rc1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v22_0_0_rc1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v22-0-0-rc1">
+<h1>v22_0_0_rc1<a class="headerlink" href="#v22-0-0-rc1" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2021-04-06 22:48</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Added Product(s)</p></th>
+<th class="head"><p>Removed Products(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>dustmaps_cachedata</p></td>
+<td><p>ci_ctio0m9</p></td>
+</tr>
+<tr class="row-odd"><td><p>faro</p></td>
+<td><p>firefly_client</p></td>
+</tr>
+<tr class="row-even"><td><p>meas_extensions_piff</p></td>
+<td><p>obs_ctio0m9</p></td>
+</tr>
+</tbody>
+</table>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 34%" />
+<col style="width: 4%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4875">DM-4875</a></p></td>
+<td><p>Give base an updated readme file</p></td>
+<td><p>2021-02-03T20:15Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11125">DM-11125</a></p></td>
+<td><p>lsstDebug behaviour does not match documentation</p></td>
+<td><p>2021-03-26T04:26Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12549">DM-12549</a></p></td>
+<td><p>ap_pipe must call AssociationTask in a reproducible order</p></td>
+<td><p>2021-03-24T18:25Z</p></td>
+<td><p>ap_verify, ctrl_mpexec, ctrl_mpexec</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14875">DM-14875</a></p></td>
+<td><p>What to add to the pipe_tasks readme</p></td>
+<td><p>2021-02-04T21:00Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-17071">DM-17071</a></p></td>
+<td><p>Remove afw.math.mathLib</p></td>
+<td><p>2021-02-02T01:56Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-17689">DM-17689</a></p></td>
+<td><p>Expose maximum number of bits used by IdFactory</p></td>
+<td><p>2021-03-03T15:40Z</p></td>
+<td><p>obs_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-18000">DM-18000</a></p></td>
+<td><p>Implement PipelineTask and yaml file to convert DiaSources for SDM system inside ap_association</p></td>
+<td><p>2021-02-25T20:52Z</p></td>
+<td><p>ap_association</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-19470">DM-19470</a></p></td>
+<td><p>Create jointcal PipelineTask (version 0: tests)</p></td>
+<td><p>2020-12-14T22:38Z</p></td>
+<td><p>jointcal, testdata_jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-19942">DM-19942</a></p></td>
+<td><p>ForcedPhotCcdTask in PipelineTask mode needs to accept references from multiple patches</p></td>
+<td><p>2021-03-02T21:49Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-20695">DM-20695</a></p></td>
+<td><p>Coadd in Gen3 doesn’t have a Selector like the one in Gen2</p></td>
+<td><p>2021-03-02T04:41Z</p></td>
+<td><p>obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-20703">DM-20703</a></p></td>
+<td><p>Modernize pybind11 wrappers for afw.fits, afw.geom</p></td>
+<td><p>2021-02-17T17:50Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-20749">DM-20749</a></p></td>
+<td><p>Examine results of image differencing with inserted fakes</p></td>
+<td><p>2021-01-22T21:34Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-21916">DM-21916</a></p></td>
+<td><p>SQuaSH upload of Gen 3 Measurements</p></td>
+<td><p>2021-02-23T00:39Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-22277">DM-22277</a></p></td>
+<td><p>Convert TransformObjectTableTask  and friends to Gen 3</p></td>
+<td><p>2021-04-01T06:46Z</p></td>
+<td><p>obs_cfht, obs_decam, obs_lsst, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-23032">DM-23032</a></p></td>
+<td><p>CreateSDM functor for bitpacking mutiple flag columns</p></td>
+<td><p>2021-03-30T22:18Z</p></td>
+<td><p>ap_association</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-23156">DM-23156</a></p></td>
+<td><p>Add ways to test a PipelineTask’s init inputs/outputs</p></td>
+<td><p>2021-03-24T20:30Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-23159">DM-23159</a></p></td>
+<td><p>Make PTC task compatible with RFC-352</p></td>
+<td><p>2021-01-22T01:20Z</p></td>
+<td><p>cp_pipe, daf_butler, daf_butler, daf_butler, ip_isr, ip_isr, ip_isr, obs_base, obs_base, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-23862">DM-23862</a></p></td>
+<td><p>Split data ID handling off from butlerTests.makeTestRepo</p></td>
+<td><p>2021-02-09T18:12Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-23985">DM-23985</a></p></td>
+<td><p>Cannot do linearity corrections in Gen 3 DECam processing</p></td>
+<td><p>2021-03-06T02:56Z</p></td>
+<td><p>daf_butler, ip_isr, obs_base, obs_decam, obs_decam_data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24024">DM-24024</a></p></td>
+<td><p>Revisit region padding in HSC Gen3 ingest or visit definition</p></td>
+<td><p>2021-01-17T01:12Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24318">DM-24318</a></p></td>
+<td><p>Add PipelineTask to fgcmcal</p></td>
+<td><p>2021-01-27T04:45Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24349">DM-24349</a></p></td>
+<td><p>Write a Source.yaml for obs_lsst/imSim</p></td>
+<td><p>2020-12-16T04:08Z</p></td>
+<td><p>obs_lsst, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24638">DM-24638</a></p></td>
+<td><p>Convert TransformSourceTableTask and friends to Gen3</p></td>
+<td><p>2021-02-24T02:37Z</p></td>
+<td><p>obs_cfht, obs_decam, obs_lsst, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24704">DM-24704</a></p></td>
+<td><p>Make brighter-fatter correction a subclass of lsst.ip.isr.IsrCalib</p></td>
+<td><p>2021-04-01T20:11Z</p></td>
+<td><p>cp_pipe, daf_butler, ip_isr, obs_base, obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24762">DM-24762</a></p></td>
+<td><p>Add option to PTC task to correct for sigma clipping bias</p></td>
+<td><p>2021-04-06T22:39Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25050">DM-25050</a></p></td>
+<td><p>Fix non-normalized matching kernel case in the decorrelation afterburner</p></td>
+<td><p>2021-01-21T09:24Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25304">DM-25304</a></p></td>
+<td><p>Create task to extract and preprocess bright stars</p></td>
+<td><p>2021-01-27T14:14Z</p></td>
+<td><p>daf_butler, meas_algorithms, obs_base, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25807">DM-25807</a></p></td>
+<td><p>refcat requireProperMotion=True config option bypassed for misconfigured catalog</p></td>
+<td><p>2021-02-19T09:04Z</p></td>
+<td><p>jointcal, meas_algorithms, obs_test</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25849">DM-25849</a></p></td>
+<td><p>Update HSC to use jointcal refcat defaults</p></td>
+<td><p>2020-12-08T22:48Z</p></td>
+<td><p>jointcal, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25894">DM-25894</a></p></td>
+<td><p>Allow ProcessBrightStarsTask to extract stars on, or slightly beyond exposure edge</p></td>
+<td><p>2021-03-01T21:26Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-25965">DM-25965</a></p></td>
+<td><p>Refactor gen3 raw ingest to support remote files</p></td>
+<td><p>2021-03-18T01:14Z</p></td>
+<td><p>astro_metadata_translator, daf_base, daf_butler, obs_base, obs_cfht, obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26194">DM-26194</a></p></td>
+<td><p>Remove meas_extensions_scarlet’s deblend.py</p></td>
+<td><p>2021-03-31T14:51Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26224">DM-26224</a></p></td>
+<td><p>Deprecate defaultFilter in LoadReferenceObjectsConfig</p></td>
+<td><p>2021-02-10T19:17Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26302">DM-26302</a></p></td>
+<td><p>Avoid requiring long-lived per-Database-instance connections</p></td>
+<td><p>2021-03-02T18:39Z</p></td>
+<td><p>ctrl_mpexec, daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26372">DM-26372</a></p></td>
+<td><p>Units wrong in deepDiff_diaSrc catalog</p></td>
+<td><p>2021-02-11T00:10Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26393">DM-26393</a></p></td>
+<td><p>Write an Object.yaml and configs for obs_lsst/imsim</p></td>
+<td><p>2021-02-20T03:29Z</p></td>
+<td><p>obs_lsst, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26484">DM-26484</a></p></td>
+<td><p>Run read noise eotest task at NCSA</p></td>
+<td><p>2021-01-27T03:32Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26593">DM-26593</a></p></td>
+<td><p>Create an integrated pipeline for AP fake analysis</p></td>
+<td><p>2021-01-07T00:51Z</p></td>
+<td><p>ap_pipe, ap_verify, pipe_tasks, verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26688">DM-26688</a></p></td>
+<td><p>Add command-line tool for Registry.associate</p></td>
+<td><p>2021-02-23T20:32Z</p></td>
+<td><p>ctrl_mpexec, daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26689">DM-26689</a></p></td>
+<td><p>Add command-line tool for Butler.pruneDatasets</p></td>
+<td><p>2021-02-03T22:54Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26868">DM-26868</a></p></td>
+<td><p>Remove obs_ctio0m9 from lsst_distrib</p></td>
+<td><p>2021-01-04T19:51Z</p></td>
+<td><p>lsst_ci, lsst_obs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27008">DM-27008</a></p></td>
+<td><p>Update Functor implementation to use gen3 butler/parquet access</p></td>
+<td><p>2020-12-17T19:15Z</p></td>
+<td><p>daf_butler, pipe_tasks, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27100">DM-27100</a></p></td>
+<td><p>Integrate panDA dag generation into ctrl_bps</p></td>
+<td><p>2021-03-01T19:20Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27153">DM-27153</a></p></td>
+<td><p>Defaulting the instrument in registry</p></td>
+<td><p>2021-01-12T12:23Z</p></td>
+<td><p>ctrl_mpexec, daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27169">DM-27169</a></p></td>
+<td><p>Use FilterLabel in Exposure/ExposureInfo</p></td>
+<td><p>2020-12-09T01:49Z</p></td>
+<td><p>afw, daf_butler, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27170">DM-27170</a></p></td>
+<td><p>Deprecate and phase out afw::image::Filter</p></td>
+<td><p>2021-01-29T21:38Z</p></td>
+<td><p>afw, ap_association, cp_pipe, ip_diffim, ip_isr, jointcal, meas_astrom, obs_base, obs_cfht, obs_decam, obs_lsst, obs_subaru, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27173">DM-27173</a></p></td>
+<td><p>Add doc field to obs.base.FilterDefinition</p></td>
+<td><p>2021-02-01T20:40Z</p></td>
+<td><p>obs_base, obs_decam, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27174">DM-27174</a></p></td>
+<td><p>Create InstrumentLabel class for ExposureInfo</p></td>
+<td><p>2021-01-25T21:15Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27178">DM-27178</a></p></td>
+<td><p>Standardize aliases on Gen 2 Exposure get</p></td>
+<td><p>2020-12-17T17:19Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27255">DM-27255</a></p></td>
+<td><p>Merge generic and HSC-specific config overrides in obs_subaru</p></td>
+<td><p>2020-12-19T03:33Z</p></td>
+<td><p>fgcmcal, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27301">DM-27301</a></p></td>
+<td><p>Undefined behavior for getArray in ImageBase when _gilView has no height</p></td>
+<td><p>2021-02-22T22:36Z</p></td>
+<td><p>afw, ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27325">DM-27325</a></p></td>
+<td><p>Can’t rerun ap_verify on same repository in Gen 3 (II)</p></td>
+<td><p>2021-03-03T21:06Z</p></td>
+<td><p>ap_verify, verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27388">DM-27388</a></p></td>
+<td><p>Implement metric system for fakes in AP</p></td>
+<td><p>2020-12-14T22:52Z</p></td>
+<td><p>ap_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27406">DM-27406</a></p></td>
+<td><p>Leave parent footprints untouched</p></td>
+<td><p>2020-12-15T14:35Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27462">DM-27462</a></p></td>
+<td><p>Add –config-file option alias to CmdLineTask</p></td>
+<td><p>2021-02-11T20:00Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27473">DM-27473</a></p></td>
+<td><p>butler Config merge doesn’t with dict despite docstring saying it does.</p></td>
+<td><p>2021-02-08T17:03Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27476">DM-27476</a></p></td>
+<td><p>Add support for metadata sidecar files for ingest</p></td>
+<td><p>2021-03-12T20:53Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27477">DM-27477</a></p></td>
+<td><p>Define JSON serialization format for ObservationInfo</p></td>
+<td><p>2021-02-17T15:34Z</p></td>
+<td><p>astro_metadata_translator</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27502">DM-27502</a></p></td>
+<td><p>Numpydoc conversion of meas_algorithms through makeCoaddApCorrMap.py</p></td>
+<td><p>2021-02-09T20:55Z</p></td>
+<td><p>meas_algorithms, meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27570">DM-27570</a></p></td>
+<td><p>bps report id not showing running jobs in Total line</p></td>
+<td><p>2021-03-18T02:46Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27613">DM-27613</a></p></td>
+<td><p>Apply FGCM and jointcal in Gen3 MakeWarpTask</p></td>
+<td><p>2021-03-03T05:32Z</p></td>
+<td><p>fgcmcal, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27630">DM-27630</a></p></td>
+<td><p>Use CI dataset in ap_verify examples</p></td>
+<td><p>2021-02-16T20:04Z</p></td>
+<td><p>ap_verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27652">DM-27652</a></p></td>
+<td><p>Provide source centroiding utility for T&amp;S in pipe_tasks</p></td>
+<td><p>2021-03-03T23:57Z</p></td>
+<td><p>afwdata, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27654">DM-27654</a></p></td>
+<td><p>Let Doxygen document private virtual methods</p></td>
+<td><p>2021-02-05T01:07Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27657">DM-27657</a></p></td>
+<td><p>Make bbox check for fakes more robust.</p></td>
+<td><p>2021-01-07T04:41Z</p></td>
+<td><p>ap_pipe, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27666">DM-27666</a></p></td>
+<td><p>Command line has full path for QuantumGraph filename</p></td>
+<td><p>2021-03-10T23:38Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27685">DM-27685</a></p></td>
+<td><p>Add butler make gen3 dcr subfilters subcommand</p></td>
+<td><p>2020-12-14T17:10Z</p></td>
+<td><p>daf_butler, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27696">DM-27696</a></p></td>
+<td><p>Fix Boost deprecation warning in afw</p></td>
+<td><p>2021-02-23T21:15Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27722">DM-27722</a></p></td>
+<td><p>Update scripts to use gen3 butler</p></td>
+<td><p>2021-01-14T12:57Z</p></td>
+<td><p>meas_extensions_scarlet, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27760">DM-27760</a></p></td>
+<td><p>butler ingest-raws -c option is broken</p></td>
+<td><p>2020-12-08T23:26Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27766">DM-27766</a></p></td>
+<td><p>Update usage of pyerfa in stack code</p></td>
+<td><p>2021-01-12T01:43Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27767">DM-27767</a></p></td>
+<td><p>Have specialist file template for raw data in gen3 datastore</p></td>
+<td><p>2021-01-08T20:19Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27833">DM-27833</a></p></td>
+<td><p>Enable gen3 inter-chip crosstalk for DECam</p></td>
+<td><p>2021-03-15T19:31Z</p></td>
+<td><p>ip_isr, obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27835">DM-27835</a></p></td>
+<td><p>pipetask run should always print stack trace and exception details</p></td>
+<td><p>2020-12-09T02:19Z</p></td>
+<td><p>ctrl_bps, ctrl_mpexec, daf_butler, obs_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27857">DM-27857</a></p></td>
+<td><p>Update ap_verify dataset conversion scripts</p></td>
+<td><p>2020-12-10T21:47Z</p></td>
+<td><p>ap_verify, ap_verify_testdata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27863">DM-27863</a></p></td>
+<td><p>Allow controller = ‘H’ for exposure_id calculation</p></td>
+<td><p>2020-12-17T20:25Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27868">DM-27868</a></p></td>
+<td><p>Stop erroneously adjusting the raw WCS in assembleCcdTask</p></td>
+<td><p>2020-12-08T19:54Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27869">DM-27869</a></p></td>
+<td><p>Create jointcal pipetask</p></td>
+<td><p>2021-03-03T01:01Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27883">DM-27883</a></p></td>
+<td><p>obs_lsst has a race condition between tests and curated calibration ingestion</p></td>
+<td><p>2021-01-07T00:18Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27884">DM-27884</a></p></td>
+<td><p>Improve ButlerHttpURI requests behavior</p></td>
+<td><p>2021-01-28T10:26Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27888">DM-27888</a></p></td>
+<td><p>Filename passed to QuantumGraphs’ save() should have extension .qgraph</p></td>
+<td><p>2020-12-08T20:40Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27896">DM-27896</a></p></td>
+<td><p>Add summary statistics component to Exposure</p></td>
+<td><p>2021-02-02T18:03Z</p></td>
+<td><p>afw, daf_butler, obs_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27919">DM-27919</a></p></td>
+<td><p>DECam “physical_filter” is too long and has spaces</p></td>
+<td><p>2021-02-10T00:37Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27922">DM-27922</a></p></td>
+<td><p>Create initial gen3 calibs for DC2</p></td>
+<td><p>2021-02-18T23:22Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27929">DM-27929</a></p></td>
+<td><p>Skip sky objects during deblending</p></td>
+<td><p>2021-03-29T20:45Z</p></td>
+<td><p>meas_extensions_scarlet, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27941">DM-27941</a></p></td>
+<td><p>Update the import system for Pipelines</p></td>
+<td><p>2020-12-17T01:45Z</p></td>
+<td><p>ap_pipe, ap_verify, obs_subaru, pipe_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27971">DM-27971</a></p></td>
+<td><p>query-dimension-records throws an exception on invalid dimensions</p></td>
+<td><p>2021-02-09T14:51Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27985">DM-27985</a></p></td>
+<td><p>Fix timespan edge cases, make temporal queries work again, and add bindparam support</p></td>
+<td><p>2020-12-17T04:01Z</p></td>
+<td><p>daf_butler, pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28004">DM-28004</a></p></td>
+<td><p>ExposureInfo may persist dummy FilterLabels</p></td>
+<td><p>2020-12-14T20:02Z</p></td>
+<td><p>afw, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28036">DM-28036</a></p></td>
+<td><p>Change Pipelines to and save to a URI</p></td>
+<td><p>2021-02-15T19:34Z</p></td>
+<td><p>ctrl_mpexec, pipe_base, pipelines_check</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28040">DM-28040</a></p></td>
+<td><p>Persistence of the Stamps object is broken</p></td>
+<td><p>2021-01-13T21:33Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28042">DM-28042</a></p></td>
+<td><p>Allow test temporary directory root to be set by envvar</p></td>
+<td><p>2020-12-17T03:36Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28046">DM-28046</a></p></td>
+<td><p>Update PhosimEimgParseTask to use LsstCam</p></td>
+<td><p>2021-02-26T23:38Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28056">DM-28056</a></p></td>
+<td><p>Fix fgcmCalibrateTractTable DefaultName Error</p></td>
+<td><p>2020-12-17T00:45Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28087">DM-28087</a></p></td>
+<td><p>obs_lsst accounts for detectors twice in IDs</p></td>
+<td><p>2020-12-18T20:05Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28088">DM-28088</a></p></td>
+<td><p>Change fgcmcal to use FilterLabel</p></td>
+<td><p>2021-02-05T22:45Z</p></td>
+<td><p>fgcmcal, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28092">DM-28092</a></p></td>
+<td><p>Document that DiaPipeTask can only handle specific bands</p></td>
+<td><p>2021-02-10T21:03Z</p></td>
+<td><p>ap_association, ap_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28093">DM-28093</a></p></td>
+<td><p>Change isrTask (and relevant configs) to use physicalLabel</p></td>
+<td><p>2021-03-11T19:48Z</p></td>
+<td><p>ip_isr, obs_cfht, obs_decam, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28095">DM-28095</a></p></td>
+<td><p>A missing storage class causes all dataset queries to fail</p></td>
+<td><p>2020-12-18T02:17Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28101">DM-28101</a></p></td>
+<td><p>Improve error messages and fail earlier in some pipetask error cases</p></td>
+<td><p>2021-01-28T19:33Z</p></td>
+<td><p>ctrl_mpexec, pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28102">DM-28102</a></p></td>
+<td><p>Correct obs_base typo in processCcdWithFakes</p></td>
+<td><p>2020-12-17T21:20Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28103">DM-28103</a></p></td>
+<td><p>safeClip not respecting Subaru configs</p></td>
+<td><p>2021-02-10T01:04Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28107">DM-28107</a></p></td>
+<td><p>Convert/ingest PS1 and Gaia refcats into gen3 repo for DECam use</p></td>
+<td><p>2021-01-13T20:49Z</p></td>
+<td><p>ap_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28109">DM-28109</a></p></td>
+<td><p>Test failure in obs_base test_cameraMapper.Mapper2TestCase</p></td>
+<td><p>2020-12-18T23:56Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28158">DM-28158</a></p></td>
+<td><p>2021-12-31 is not far enough in the future to trigger an Astropy warning</p></td>
+<td><p>2020-12-30T22:24Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28184">DM-28184</a></p></td>
+<td><p>gen3 crosstalk generation does not set DET_NAME correctly.</p></td>
+<td><p>2021-01-05T18:28Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28208">DM-28208</a></p></td>
+<td><p>Add python access to readComponent() and associated Storable tests.</p></td>
+<td><p>2021-01-14T05:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28214">DM-28214</a></p></td>
+<td><p>Adapt pipe_analysis scripts to allow loading of Gaia reference catalogs for astrometric matching</p></td>
+<td><p>2021-03-02T16:26Z</p></td>
+<td><p>obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28220">DM-28220</a></p></td>
+<td><p>Update docstring for <a href="#id1"><span class="problematic" id="id2">import_</span></a></p></td>
+<td><p>2021-01-07T00:30Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28233">DM-28233</a></p></td>
+<td><p>Jointcal refcat position errors have incorrect units</p></td>
+<td><p>2021-01-07T05:41Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28236">DM-28236</a></p></td>
+<td><p>get(‘calexp_filterLabel’) does not return a full label for pre-FilterLabel data</p></td>
+<td><p>2021-01-13T00:00Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28245">DM-28245</a></p></td>
+<td><p>Update ConsolidateVisitSummaryTask to use exposure summary component</p></td>
+<td><p>2021-04-05T20:15Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28257">DM-28257</a></p></td>
+<td><p>Allow Butler to take a PosixPath object as config</p></td>
+<td><p>2021-01-08T18:59Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28258">DM-28258</a></p></td>
+<td><p>Epoch is not getting passed consistently among reference catalog loading functions</p></td>
+<td><p>2021-01-13T03:10Z</p></td>
+<td><p>meas_algorithms, meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28283">DM-28283</a></p></td>
+<td><p>Add fakes_calexp and fakes_src dataset types to imsimMapper</p></td>
+<td><p>2021-01-11T16:20Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28314">DM-28314</a></p></td>
+<td><p>Create JSON representations of common gen3 python types</p></td>
+<td><p>2021-02-04T20:43Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28323">DM-28323</a></p></td>
+<td><p>Make meas_extensions_scarlet the default deblender</p></td>
+<td><p>2021-01-28T01:24Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28351">DM-28351</a></p></td>
+<td><p>Add faro to lsst_distrib</p></td>
+<td><p>2021-03-04T18:39Z</p></td>
+<td><p>lsst_distrib</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28355">DM-28355</a></p></td>
+<td><p>Allow ingest-raws to fail immediately on first error</p></td>
+<td><p>2021-02-04T04:56Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28368">DM-28368</a></p></td>
+<td><p>Fix afw readComponent to allow reading of all components</p></td>
+<td><p>2021-01-19T18:55Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28384">DM-28384</a></p></td>
+<td><p>Numpydoc conversion of meas_algorithms through measureApCorr.py</p></td>
+<td><p>2021-03-16T04:04Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28386">DM-28386</a></p></td>
+<td><p>Package versions change depending on Python imports</p></td>
+<td><p>2021-01-16T03:15Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28387">DM-28387</a></p></td>
+<td><p>verify’s dispatchVerify.py only works in Jenkins if gitpython is absent</p></td>
+<td><p>2021-01-17T02:58Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28389">DM-28389</a></p></td>
+<td><p>Create a gen3 task to collate tract-level parquet tables for QA analyses</p></td>
+<td><p>2021-02-10T05:16Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28392">DM-28392</a></p></td>
+<td><p>Fix string formatting typo</p></td>
+<td><p>2021-01-19T02:17Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28418">DM-28418</a></p></td>
+<td><p>pipetask hangs with very large numbers of quanta</p></td>
+<td><p>2021-01-20T20:28Z</p></td>
+<td><p>ctrl_mpexec</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28426">DM-28426</a></p></td>
+<td><p>daf_persistence/test_safeFileIO.py creates too many processes on macOS</p></td>
+<td><p>2021-01-20T15:54Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28429">DM-28429</a></p></td>
+<td><p>Convert MultiProFitTask into gen3 PipelineTask</p></td>
+<td><p>2021-03-03T22:20Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28439">DM-28439</a></p></td>
+<td><p>Converting HiTS2015 repo fails on bad filter</p></td>
+<td><p>2021-03-24T18:37Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28441">DM-28441</a></p></td>
+<td><p>PyYAML FullLoader as used by daf_persistence no longer works</p></td>
+<td><p>2021-01-21T07:53Z</p></td>
+<td><p>daf_persistence, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28442">DM-28442</a></p></td>
+<td><p>Fix variance plane calculation scaling in non-normalized matching kernel case</p></td>
+<td><p>2021-02-11T06:54Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28457">DM-28457</a></p></td>
+<td><p>In cpCombine.py, the config option “combine” should be a string, not the integer stats value</p></td>
+<td><p>2021-01-29T20:17Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28459">DM-28459</a></p></td>
+<td><p>Bands seem wrong for LATISS in butler</p></td>
+<td><p>2021-02-10T20:19Z</p></td>
+<td><p>obs_base, obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28460">DM-28460</a></p></td>
+<td><p>HSC ENG-R1 filter seems to have wrong band</p></td>
+<td><p>2021-02-08T22:26Z</p></td>
+<td><p>astro_metadata_translator, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28466">DM-28466</a></p></td>
+<td><p>conda installs reset EUPS_PATH</p></td>
+<td><p>2021-01-27T20:13Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28474">DM-28474</a></p></td>
+<td><p>Update scarlet to latest version</p></td>
+<td><p>2021-02-01T16:38Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28480">DM-28480</a></p></td>
+<td><p>Flake8/pyflakes needs to update to work with Python 3.8</p></td>
+<td><p>2021-01-27T00:35Z</p></td>
+<td><p>afw, cp_pipe, ctrl_bps, ctrl_mpexec, daf_persistence, ip_diffim, jointcal, log, meas_algorithms, meas_base, meas_deblender, meas_extensions_psfex, obs_base, obs_subaru, pipe_base, pipe_tasks, shapelet, utils, validate_drp, verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28491">DM-28491</a></p></td>
+<td><p>Fix github actions on daf_butler</p></td>
+<td><p>2021-01-26T18:05Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28498">DM-28498</a></p></td>
+<td><p>psFlux is biased in difference images.</p></td>
+<td><p>2021-02-11T18:47Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28506">DM-28506</a></p></td>
+<td><p>Reading coadds fails on VisitInfo</p></td>
+<td><p>2021-01-27T18:36Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28511">DM-28511</a></p></td>
+<td><p>rubin-env 0.2.1 requires sphinxcontrib package from defaults channel</p></td>
+<td><p>2021-01-27T15:39Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28523">DM-28523</a></p></td>
+<td><p>Add fake source injection capability for sources falling outside the frame</p></td>
+<td><p>2021-01-29T23:09Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28527">DM-28527</a></p></td>
+<td><p>Bad results (and unexpectd slowness) from query-datasets</p></td>
+<td><p>2021-02-01T21:08Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28529">DM-28529</a></p></td>
+<td><p>conda config –add channels defaults prepends</p></td>
+<td><p>2021-01-27T23:15Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28531">DM-28531</a></p></td>
+<td><p>imsim data needs different ptc pairing.</p></td>
+<td><p>2021-02-03T22:31Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28542">DM-28542</a></p></td>
+<td><p>Implement RFC-750</p></td>
+<td><p>2021-03-17T01:16Z</p></td>
+<td><p>meas_extensions_scarlet, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28552">DM-28552</a></p></td>
+<td><p>Make warping optional in ProcessBrightStarsTask</p></td>
+<td><p>2021-02-08T17:32Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28553">DM-28553</a></p></td>
+<td><p>Update the gain, readNoise, and saturation levels based on EOTest</p></td>
+<td><p>2021-03-11T20:37Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28555">DM-28555</a></p></td>
+<td><p>Add verbosity to ApPipe and DiaPipe DB errors</p></td>
+<td><p>2021-03-16T18:01Z</p></td>
+<td><p>ap_association, ap_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28570">DM-28570</a></p></td>
+<td><p>Extend calexp cutout task to take both width and height</p></td>
+<td><p>2021-02-04T23:51Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28577">DM-28577</a></p></td>
+<td><p>Surpress Filter warnings in FilterDefinitions</p></td>
+<td><p>2021-02-02T00:35Z</p></td>
+<td><p>obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28583">DM-28583</a></p></td>
+<td><p>Update fitsExposure formatter to fill in filterLabel from dataId</p></td>
+<td><p>2021-02-18T06:30Z</p></td>
+<td><p>afw, daf_butler, obs_base, obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28584">DM-28584</a></p></td>
+<td><p>Scarlet use of np.float breaks on numpy 1.20.0</p></td>
+<td><p>2021-02-01T21:16Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28587">DM-28587</a></p></td>
+<td><p>Silence scarlet warning messages</p></td>
+<td><p>2021-02-05T20:26Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28595">DM-28595</a></p></td>
+<td><p>Identify central detection footprint and change flags accordingly in ProcessBrightStarsTask</p></td>
+<td><p>2021-02-04T03:39Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28597">DM-28597</a></p></td>
+<td><p>Fix colorterm/photoCal filterLabel confusion</p></td>
+<td><p>2021-03-31T22:02Z</p></td>
+<td><p>fgcmcal, jointcal, obs_cfht, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28598">DM-28598</a></p></td>
+<td><p>Add daf_butler FAQ/gotchas docs</p></td>
+<td><p>2021-03-26T15:20Z</p></td>
+<td><p>ctrl_mpexec, daf_butler, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28600">DM-28600</a></p></td>
+<td><p>Add option to apply sky correction to ProcessBrightStarsTask</p></td>
+<td><p>2021-03-03T14:37Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28609">DM-28609</a></p></td>
+<td><p>Fix Zero Size Bounding Box Crash in InsertFakes.py</p></td>
+<td><p>2021-02-03T17:37Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28612">DM-28612</a></p></td>
+<td><p>Enable on-sky translations for LSSTCam</p></td>
+<td><p>2021-02-03T16:04Z</p></td>
+<td><p>astro_metadata_translator, obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28623">DM-28623</a></p></td>
+<td><p>pybind11-wrapped objects do not correctly implement python hash</p></td>
+<td><p>2021-02-23T16:02Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28625">DM-28625</a></p></td>
+<td><p>Remove doxygen build from obs_base</p></td>
+<td><p>2021-02-03T23:05Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28627">DM-28627</a></p></td>
+<td><p>Undo DM-28511</p></td>
+<td><p>2021-02-04T01:38Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28636">DM-28636</a></p></td>
+<td><p>Set up initial “main” shared data repository at NCSA</p></td>
+<td><p>2021-04-06T19:37Z</p></td>
+<td><p>daf_butler, obs_base, obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28642">DM-28642</a></p></td>
+<td><p>Fix computeSummaryStatsTask documentation files</p></td>
+<td><p>2021-02-03T19:37Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28648">DM-28648</a></p></td>
+<td><p>Change datastore to support minimal registry for pipeline execution</p></td>
+<td><p>2021-02-18T03:55Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28658">DM-28658</a></p></td>
+<td><p>Modernize pybind11 wrappers for afw.display  afw.cameraGeom  afw.coord</p></td>
+<td><p>2021-03-22T23:30Z</p></td>
+<td><p>afw, display_ds9, display_firefly, ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28659">DM-28659</a></p></td>
+<td><p>daf_persistence/test_safeFileIO.py creates too many processes on most machines</p></td>
+<td><p>2021-02-17T23:12Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28660">DM-28660</a></p></td>
+<td><p>Update rubin-env to 0.3.1</p></td>
+<td><p>2021-02-04T04:53Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28665">DM-28665</a></p></td>
+<td><p>Remove new-dimensions limitations in queries</p></td>
+<td><p>2021-02-05T17:11Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28674">DM-28674</a></p></td>
+<td><p>Protect hash in ButlerURI</p></td>
+<td><p>2021-02-05T16:28Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28677">DM-28677</a></p></td>
+<td><p>Avoid numerical warnings, update docstrings, add option to calculate only the factors in ScaleVarianceTask</p></td>
+<td><p>2021-02-27T06:56Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28693">DM-28693</a></p></td>
+<td><p>Additional Filter deprecation warnings in lsstCamMapper</p></td>
+<td><p>2021-03-02T04:06Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28701">DM-28701</a></p></td>
+<td><p>HSC RC2 processing fails due to improper model</p></td>
+<td><p>2021-02-08T17:04Z</p></td>
+<td><p>pipe_drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28707">DM-28707</a></p></td>
+<td><p>display_firefly can’t use conda firefly_client</p></td>
+<td><p>2021-02-08T16:30Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28717">DM-28717</a></p></td>
+<td><p>Allow for Stamps formatter to handle bbox</p></td>
+<td><p>2021-03-10T13:31Z</p></td>
+<td><p>afw, daf_butler, meas_algorithms, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28727">DM-28727</a></p></td>
+<td><p>Modernize pybind11 wrappers for afw.image</p></td>
+<td><p>2021-03-16T14:44Z</p></td>
+<td><p>afw, fgcmcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28730">DM-28730</a></p></td>
+<td><p>Look into scarlet memory issues</p></td>
+<td><p>2021-02-23T21:31Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28731">DM-28731</a></p></td>
+<td><p>Add meas_extensions_piff to lsst_apps</p></td>
+<td><p>2021-02-12T00:58Z</p></td>
+<td><p>lsst_apps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28742">DM-28742</a></p></td>
+<td><p>Set solid plate decam filter to band opaque</p></td>
+<td><p>2021-02-10T16:09Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28744">DM-28744</a></p></td>
+<td><p>Fix band assignments in obs_cfht</p></td>
+<td><p>2021-02-10T23:49Z</p></td>
+<td><p>obs_cfht</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28751">DM-28751</a></p></td>
+<td><p>Make a PipelineTask that can run ngmix tasks</p></td>
+<td><p>2021-03-12T22:37Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28755">DM-28755</a></p></td>
+<td><p>Update fgcmcal to make use of visitSummary tables</p></td>
+<td><p>2021-03-03T16:01Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28756">DM-28756</a></p></td>
+<td><p>Create VisitSummary tables for testdata_jointcal</p></td>
+<td><p>2021-02-19T18:45Z</p></td>
+<td><p>fgcmcal, pipe_tasks, testdata_jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28762">DM-28762</a></p></td>
+<td><p>Update rubin-env to 0.4.1</p></td>
+<td><p>2021-02-11T06:40Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28768">DM-28768</a></p></td>
+<td><p>Get alert_packet to work with fastavro &gt;= 0.24</p></td>
+<td><p>2021-02-23T21:40Z</p></td>
+<td><p>alert_packet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28783">DM-28783</a></p></td>
+<td><p>RASTART/END headers are incorrect for LATISS images</p></td>
+<td><p>2021-02-17T23:39Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28844">DM-28844</a></p></td>
+<td><p>Refactor astro_metadata_translator command line tooling</p></td>
+<td><p>2021-03-02T00:13Z</p></td>
+<td><p>astro_metadata_translator</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28857">DM-28857</a></p></td>
+<td><p>sort collections before pruning in <cite>butler prune-collection</cite></p></td>
+<td><p>2021-03-25T18:23Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28858">DM-28858</a></p></td>
+<td><p>Compare the data products of the gen2 vs. gen3 ci_hsc’s  up to Single Frame Processing</p></td>
+<td><p>2021-02-26T04:59Z</p></td>
+<td><p>meas_algorithms, meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28922">DM-28922</a></p></td>
+<td><p>pipe.tasks.Functor doesn’t work with deferred dataref if not multi-level</p></td>
+<td><p>2021-02-25T06:16Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28927">DM-28927</a></p></td>
+<td><p>Dimension packing/unpacking broken for DECam</p></td>
+<td><p>2021-03-04T21:25Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28929">DM-28929</a></p></td>
+<td><p>bps incorrectly assumes htcondor attribute is a string</p></td>
+<td><p>2021-02-24T21:04Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28936">DM-28936</a></p></td>
+<td><p>Try to get calibration source selection consistent between gen2 and gen3 middleware</p></td>
+<td><p>2021-03-30T22:54Z</p></td>
+<td><p>meas_algorithms, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28940">DM-28940</a></p></td>
+<td><p>Create functor for pix^2-&gt;arcsec^2 unit conversion</p></td>
+<td><p>2021-03-22T16:43Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28942">DM-28942</a></p></td>
+<td><p>Create dipMeanFlux/dipFluxDiff functor.</p></td>
+<td><p>2021-03-24T23:07Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28947">DM-28947</a></p></td>
+<td><p>Fix failing ci_hsc test</p></td>
+<td><p>2021-02-25T00:18Z</p></td>
+<td><p>meas_extensions_scarlet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28953">DM-28953</a></p></td>
+<td><p>Implement a visit-level BestSeeing selector in Gen3</p></td>
+<td><p>2021-04-01T05:32Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28958">DM-28958</a></p></td>
+<td><p>Fix breakage due to move of the job reporter class from faro to verify</p></td>
+<td><p>2021-02-25T21:43Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28960">DM-28960</a></p></td>
+<td><p>Add CHAINED collection creation to BPS</p></td>
+<td><p>2021-03-03T22:38Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28961">DM-28961</a></p></td>
+<td><p>DiaSource centroids outside of image causing crash in cuttout creation in PackageAlerts.</p></td>
+<td><p>2021-04-06T20:16Z</p></td>
+<td><p>ap_association</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28962">DM-28962</a></p></td>
+<td><p>Update pipe_analysis scripts for “filter” to “band” name change</p></td>
+<td><p>2021-02-27T01:22Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28964">DM-28964</a></p></td>
+<td><p>Add incremental progress reporting to butler and some middleware tools</p></td>
+<td><p>2021-03-18T19:34Z</p></td>
+<td><p>daf_butler, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28978">DM-28978</a></p></td>
+<td><p>Fix Dataframe StorageClass definition</p></td>
+<td><p>2021-03-01T19:36Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-28985">DM-28985</a></p></td>
+<td><p>Update Gen2 calibration policy formats in obs_subaru</p></td>
+<td><p>2021-03-02T04:45Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29011">DM-29011</a></p></td>
+<td><p>Add walk support to ButlerURI</p></td>
+<td><p>2021-03-04T19:27Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29017">DM-29017</a></p></td>
+<td><p>Update VisitSummary tables to use detector_id as catalog id</p></td>
+<td><p>2021-03-03T23:26Z</p></td>
+<td><p>fgcmcal, jointcal, pipe_tasks, testdata_jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29019">DM-29019</a></p></td>
+<td><p>Make obs_lsst data ID packing consistent</p></td>
+<td><p>2021-03-04T02:25Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29023">DM-29023</a></p></td>
+<td><p>Remove documentation about ForcedPhotImage</p></td>
+<td><p>2021-03-03T18:12Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29041">DM-29041</a></p></td>
+<td><p>Support repository names as ap_verify –dataset argument and deprecate old names</p></td>
+<td><p>2021-03-31T17:12Z</p></td>
+<td><p>ap_verify, ap_verify_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29049">DM-29049</a></p></td>
+<td><p>jointcal gen3 fixes for running RC2</p></td>
+<td><p>2021-03-04T03:12Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29055">DM-29055</a></p></td>
+<td><p>Unbitrot Gen3 SkyCorrectionTask</p></td>
+<td><p>2021-03-04T06:19Z</p></td>
+<td><p>obs_subaru, pipe_drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29056">DM-29056</a></p></td>
+<td><p>Create S/N functor</p></td>
+<td><p>2021-03-23T20:23Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29063">DM-29063</a></p></td>
+<td><p>Unpin third party packages in rubin-env</p></td>
+<td><p>2021-03-05T01:00Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29065">DM-29065</a></p></td>
+<td><p>Ensure input lists are ordered the same before making warps</p></td>
+<td><p>2021-03-11T18:47Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29071">DM-29071</a></p></td>
+<td><p>Provide a way for RawIngestTask to report successes and failures programmatically</p></td>
+<td><p>2021-03-06T04:17Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29073">DM-29073</a></p></td>
+<td><p>Make ButlerURI immutable</p></td>
+<td><p>2021-03-05T23:45Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29106">DM-29106</a></p></td>
+<td><p>Allow butler to “forget” datasets without deleting them</p></td>
+<td><p>2021-03-12T15:06Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29117">DM-29117</a></p></td>
+<td><p>dafBase.PropertyList[] cannot change type of value</p></td>
+<td><p>2021-03-12T14:39Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29121">DM-29121</a></p></td>
+<td><p>ApPipeTask’s –reuse-outputs-from does not work with external preprocessing</p></td>
+<td><p>2021-03-24T01:49Z</p></td>
+<td><p>ap_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29166">DM-29166</a></p></td>
+<td><p>Make Instrument-generated collection names more flexible</p></td>
+<td><p>2021-03-24T18:40Z</p></td>
+<td><p>obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29187">DM-29187</a></p></td>
+<td><p>LATISS UTC/TAI problems were fixed on 2021-02-12</p></td>
+<td><p>2021-03-18T18:27Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29203">DM-29203</a></p></td>
+<td><p>Add option to flatten CHAINED collections when defining them</p></td>
+<td><p>2021-03-15T13:49Z</p></td>
+<td><p>ctrl_mpexec, daf_butler, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29218">DM-29218</a></p></td>
+<td><p>Prevent double header fixup in astro_metadata_translator</p></td>
+<td><p>2021-03-17T15:51Z</p></td>
+<td><p>astro_metadata_translator</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29225">DM-29225</a></p></td>
+<td><p>Add instrument to ProcessBrightStarsTask’s quantum dimensions</p></td>
+<td><p>2021-03-16T14:26Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29252">DM-29252</a></p></td>
+<td><p>Sqlalchemy 1.4 breaks Butler registry</p></td>
+<td><p>2021-03-17T18:33Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29255">DM-29255</a></p></td>
+<td><p>Allow Config overrides to properly handle strings and imports</p></td>
+<td><p>2021-03-23T19:57Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29262">DM-29262</a></p></td>
+<td><p>SqlAlchemy 1.4.0 breaks daf_butler and maybe other packages</p></td>
+<td><p>2021-03-17T03:11Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29266">DM-29266</a></p></td>
+<td><p>Remove need for special raw ingest task for DECam/CFHT</p></td>
+<td><p>2021-03-23T23:18Z</p></td>
+<td><p>astro_metadata_translator, obs_base, obs_cfht, obs_decam, obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29271">DM-29271</a></p></td>
+<td><p>PTC task: Refactoring/simplification of code ported from Pierre Astier’s repository.</p></td>
+<td><p>2021-03-31T20:22Z</p></td>
+<td><p>cp_pipe, ip_isr</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29272">DM-29272</a></p></td>
+<td><p>PTC task: Validate that the variance calculation provided by awf and the C_00 entry of the covariance matrix produced via FFT using Astier’s code is the same</p></td>
+<td><p>2021-04-06T20:24Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29275">DM-29275</a></p></td>
+<td><p>Fix problem in obs_base from fix_header provenance</p></td>
+<td><p>2021-03-17T18:26Z</p></td>
+<td><p>obs_base, obs_base, obs_decam, obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29280">DM-29280</a></p></td>
+<td><p>Look into source of NaN/Infs values in calexp images</p></td>
+<td><p>2021-03-23T20:40Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29299">DM-29299</a></p></td>
+<td><p>fgcm is overly aggressive when validating physicalFilterMap</p></td>
+<td><p>2021-03-24T17:39Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29303">DM-29303</a></p></td>
+<td><p>Add missing astshim dependency declaration</p></td>
+<td><p>2021-03-23T20:32Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29313">DM-29313</a></p></td>
+<td><p>FilterLabel is not properly filled in for CFHT raws</p></td>
+<td><p>2021-03-30T17:23Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29324">DM-29324</a></p></td>
+<td><p>Clean up display_firefly for proper use of firefly_client via Conda</p></td>
+<td><p>2021-03-22T05:21Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29336">DM-29336</a></p></td>
+<td><p>Templates are identical for icExp and icExpBackground in obs_lsst</p></td>
+<td><p>2021-03-22T23:06Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29345">DM-29345</a></p></td>
+<td><p>Add method to get QuantumNodes by TaskDef</p></td>
+<td><p>2021-03-23T17:43Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29351">DM-29351</a></p></td>
+<td><p>DM-28658 broke cameraGeom documentation build</p></td>
+<td><p>2021-03-23T21:53Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29354">DM-29354</a></p></td>
+<td><p>Remove deprecated gen3 data stores (fixing documentation warnings)</p></td>
+<td><p>2021-03-23T23:45Z</p></td>
+<td><p>ap_verify_testdata, daf_butler, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29359">DM-29359</a></p></td>
+<td><p>Fix checking for missing calexps in gen2 fgcmcal</p></td>
+<td><p>2021-03-24T17:39Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29383">DM-29383</a></p></td>
+<td><p>StrayLight correction fails on object stores</p></td>
+<td><p>2021-03-26T21:21Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29388">DM-29388</a></p></td>
+<td><p>ap_verify failed on d_2021_03_24</p></td>
+<td><p>2021-03-24T22:24Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29397">DM-29397</a></p></td>
+<td><p>Rename exposureScaling parameter to avoid confusion.</p></td>
+<td><p>2021-03-24T23:29Z</p></td>
+<td><p>cp_pipe, obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29398">DM-29398</a></p></td>
+<td><p>Modernize export code in pipelines_check</p></td>
+<td><p>2021-03-24T18:32Z</p></td>
+<td><p>pipelines_check</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29407">DM-29407</a></p></td>
+<td><p>visitSummary files should not persist the detector</p></td>
+<td><p>2021-03-26T00:37Z</p></td>
+<td><p>jointcal, pipe_tasks, testdata_jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29409">DM-29409</a></p></td>
+<td><p>Fix butler export with absolute URIs</p></td>
+<td><p>2021-03-25T00:48Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29412">DM-29412</a></p></td>
+<td><p>Update StampsBase so that it can serve as StorageClass for subclasses</p></td>
+<td><p>2021-03-27T02:47Z</p></td>
+<td><p>daf_butler, meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29414">DM-29414</a></p></td>
+<td><p>Misleading error message when the file doesn’t exist in the s3 datastore</p></td>
+<td><p>2021-03-26T00:12Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29424">DM-29424</a></p></td>
+<td><p>Enable boresight calculation for comCam</p></td>
+<td><p>2021-03-27T00:30Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29440">DM-29440</a></p></td>
+<td><p>Resolving file system root is fragile</p></td>
+<td><p>2021-03-26T21:36Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29446">DM-29446</a></p></td>
+<td><p>DC2 singleFrameDriver Failure: FilterLabel(physical=”z_sim_1.4”) has no band.</p></td>
+<td><p>2021-03-30T19:54Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29497">DM-29497</a></p></td>
+<td><p>Add gen2 deprecation message</p></td>
+<td><p>2021-03-31T19:03Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29500">DM-29500</a></p></td>
+<td><p>Link to afw Box docs from geom</p></td>
+<td><p>2021-04-05T21:00Z</p></td>
+<td><p>afw, geom</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29501">DM-29501</a></p></td>
+<td><p>replace unary_function and binary_function, make other changes to pass compilation with C++17 enabled</p></td>
+<td><p>2021-04-02T22:11Z</p></td>
+<td><p>afw, geom, ip_diffim, meas_algorithms, meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29509">DM-29509</a></p></td>
+<td><p>New version of deprecated python package requires version</p></td>
+<td><p>2021-03-30T21:24Z</p></td>
+<td><p>obs_base, verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29569">DM-29569</a></p></td>
+<td><p>PTC maxMeanSignal no longer works</p></td>
+<td><p>2021-04-06T19:51Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-29573">DM-29573</a></p></td>
+<td><p>Gen3 sourceTable_visit use “detector” which breaks fgcmcal</p></td>
+<td><p>2021-04-06T16:20Z</p></td>
+<td><p>fgcmcal</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v22_0_0_rc2.html" class="btn btn-neutral float-left" title="v22_0_0_rc2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v21_0_0.html" class="btn btn-neutral float-right" title="v21_0_0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

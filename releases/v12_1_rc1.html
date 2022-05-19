@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v12_1_rc1 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v12_0_0" href="v12_0_0.html" />
+    <link rel="prev" title="v12_1" href="v12_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc1.html">v22_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0.html">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0.html">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v14_0.html">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_rc1.html">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v12_1_rc1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v12_1_rc1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v12-1-rc1">
+<h1>v12_1_rc1<a class="headerlink" href="#v12-1-rc1" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2016-09-07 13:27</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Added Product(s)</p></th>
+<th class="head"><p>Removed Products(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>antlr</p></td>
+<td><p>sims_catalogs_generation</p></td>
+</tr>
+<tr class="row-odd"><td><p>dax_dbserv</p></td>
+<td><p>sims_catalogs_measures</p></td>
+</tr>
+<tr class="row-even"><td><p>dax_imgserv</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>dax_metaserv</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>dax_webserv</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>dax_webservcommon</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>flask</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>libevent</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>lsst_ci</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>lua</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>meas_extensions_photometryKron</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>mysqlproxy</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>obs_cfht</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>obs_decam</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>partition</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>protobuf</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>python_future</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>python_mysqlclient</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>qserv</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>qserv_distrib</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>qserv_testdata</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>requests</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>sims_catalogs</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sphgeom</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>testdata_cfht</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>testdata_decam</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>xrootd</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 32%" />
+<col style="width: 6%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-1972">DM-1972</a></p></td>
+<td><p>upgrade SWIG to 3.0.8 or later</p></td>
+<td><p>2016-08-02T23:08Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2280">DM-2280</a></p></td>
+<td><p>The TAN_PIXELS cameraGeom coordinate system should be with respect to the center of the focal plane</p></td>
+<td><p>2016-07-19T17:42Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3904">DM-3904</a></p></td>
+<td><p>meas_astrom update for pytest and SIP test can fail if tests run all in one process</p></td>
+<td><p>2016-08-17T13:55Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4926">DM-4926</a></p></td>
+<td><p>Centroids fall outside Footprints</p></td>
+<td><p>2016-08-08T00:24Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5749">DM-5749</a></p></td>
+<td><p>Update welcome message in newinstall.sh</p></td>
+<td><p>2016-06-02T19:38Z</p></td>
+<td><p>lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5877">DM-5877</a></p></td>
+<td><p>Use Afterburners to clean up aperture correction logic</p></td>
+<td><p>2016-07-05T17:02Z</p></td>
+<td><p>ip_diffim, meas_algorithms, meas_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5932">DM-5932</a></p></td>
+<td><p>Trial implementation of Lupton(ZOGY) in stack</p></td>
+<td><p>2016-06-17T19:59Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6320">DM-6320</a></p></td>
+<td><p>Port utils to Python 3</p></td>
+<td><p>2016-08-04T23:18Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6322">DM-6322</a></p></td>
+<td><p>Port base package to Python 3</p></td>
+<td><p>2016-08-04T18:54Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6352">DM-6352</a></p></td>
+<td><p>Use the HTM based reference catalogs in tests</p></td>
+<td><p>2016-07-27T00:36Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6459">DM-6459</a></p></td>
+<td><p>productize “Repository Refactor”</p></td>
+<td><p>2016-07-20T00:14Z</p></td>
+<td><p>daf_persistence, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6521">DM-6521</a></p></td>
+<td><p>Enhance lsst.log by having a Log object and Python interface</p></td>
+<td><p>2016-07-19T19:25Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6563">DM-6563</a></p></td>
+<td><p>Clean-up rerun documentation</p></td>
+<td><p>2016-06-15T19:37Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6613">DM-6613</a></p></td>
+<td><p>Typo in afw/display/interface.py</p></td>
+<td><p>2016-08-09T16:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6620">DM-6620</a></p></td>
+<td><p>Cannot instantiate LoadAstrometryNetObjectsTask without Config object</p></td>
+<td><p>2016-06-21T22:39Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6631">DM-6631</a></p></td>
+<td><p>Single-frame processing tasks are no longer usable without a Butler</p></td>
+<td><p>2016-07-01T20:03Z</p></td>
+<td><p>pipe_drivers, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6635">DM-6635</a></p></td>
+<td><p>Typo in CoaddSrcTransformTask</p></td>
+<td><p>2016-08-22T13:55Z</p></td>
+<td><p>obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6651">DM-6651</a></p></td>
+<td><p>Move new reference loader so meas_astrom can use it and perform some cleanup</p></td>
+<td><p>2016-07-18T15:43Z</p></td>
+<td><p>meas_algorithms, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6928">DM-6928</a></p></td>
+<td><p>HSC backport: Include PSF moments in the output tables</p></td>
+<td><p>2016-07-21T15:05Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6969">DM-6969</a></p></td>
+<td><p>Fixes to LoadIndexedReferenceObjects</p></td>
+<td><p>2016-07-21T20:37Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6989">DM-6989</a></p></td>
+<td><p>ctrl_events/tests/EventAppenderTest.py fails Jenkins run-rebuild</p></td>
+<td><p>2016-07-22T23:14Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6998">DM-6998</a></p></td>
+<td><p>Problems with MemoryTest ordering</p></td>
+<td><p>2016-07-26T14:22Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6999">DM-6999</a></p></td>
+<td><p>Use lsst::log in pipe_base and pipe_tasks</p></td>
+<td><p>2016-09-02T03:05Z</p></td>
+<td><p>ip_diffim, ip_isr, meas_algorithms, meas_astrom, meas_base, meas_deblender, meas_extensions_psfex, meas_modelfit, pipe_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7021">DM-7021</a></p></td>
+<td><p>Update pex_exceptions to support Python 3</p></td>
+<td><p>2016-08-04T18:54Z</p></td>
+<td><p>pex_exceptions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7028">DM-7028</a></p></td>
+<td><p>Port daf_base to Python 3</p></td>
+<td><p>2016-08-05T20:16Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7036">DM-7036</a></p></td>
+<td><p>Port pex_policy to Python 3</p></td>
+<td><p>2016-08-05T20:46Z</p></td>
+<td><p>pex_policy</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7047">DM-7047</a></p></td>
+<td><p>Port pex_config to Python 3</p></td>
+<td><p>2016-08-05T23:18Z</p></td>
+<td><p>pex_config</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7069">DM-7069</a></p></td>
+<td><p>Port daf_persistence to Python 3</p></td>
+<td><p>2016-08-09T16:52Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7117">DM-7117</a></p></td>
+<td><p>measureCoaddSources fails with “RuntimeError: Unable to match sources”</p></td>
+<td><p>2016-09-02T18:34Z</p></td>
+<td><p>meas_astrom, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7138">DM-7138</a></p></td>
+<td><p>Port ndarray to Python 3</p></td>
+<td><p>2016-08-05T20:55Z</p></td>
+<td><p>ndarray</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7150">DM-7150</a></p></td>
+<td><p>Configure a default log for tests</p></td>
+<td><p>2016-08-08T21:25Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7152">DM-7152</a></p></td>
+<td><p>Port afw to Python 3</p></td>
+<td><p>2016-08-16T19:03Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7180">DM-7180</a></p></td>
+<td><p>Port HSC aperture correction fix</p></td>
+<td><p>2016-08-11T18:38Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7186">DM-7186</a></p></td>
+<td><p>Test failures due to /var/lib/sss/mc/passwd being open on lsst-dev7</p></td>
+<td><p>2016-08-11T12:23Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7188">DM-7188</a></p></td>
+<td><p>Allow log to accept unicode strings</p></td>
+<td><p>2016-08-10T19:28Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7207">DM-7207</a></p></td>
+<td><p>Modify afw tests to support pytest</p></td>
+<td><p>2016-08-30T15:24Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7221">DM-7221</a></p></td>
+<td><p>TUNIT header is not uniformly applied to columns in FITS table output from afw.table</p></td>
+<td><p>2016-08-24T16:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7229">DM-7229</a></p></td>
+<td><p>Modify meas base tests to support pytest</p></td>
+<td><p>2016-08-22T18:29Z</p></td>
+<td><p>meas_base, meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7232">DM-7232</a></p></td>
+<td><p>Modify pipe_base to use pytest</p></td>
+<td><p>2016-08-17T15:32Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7233">DM-7233</a></p></td>
+<td><p>Modify ip_isr tests to support pytest</p></td>
+<td><p>2016-08-16T18:46Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7235">DM-7235</a></p></td>
+<td><p>Modify pipe_tasks tests to support pytest</p></td>
+<td><p>2016-08-16T23:37Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7244">DM-7244</a></p></td>
+<td><p>Port obs_test to Python 3 and modernize unit tests</p></td>
+<td><p>2016-08-20T14:43Z</p></td>
+<td><p>obs_test</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7245">DM-7245</a></p></td>
+<td><p>Port pipe_base to Python 3</p></td>
+<td><p>2016-08-20T15:31Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7248">DM-7248</a></p></td>
+<td><p>Modify meas_algorithms tests to support pytest</p></td>
+<td><p>2016-08-21T23:46Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7250">DM-7250</a></p></td>
+<td><p>Adapt display_ds9 to py3</p></td>
+<td><p>2016-08-19T21:12Z</p></td>
+<td><p>display_ds9</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7253">DM-7253</a></p></td>
+<td><p>Modify db package to support python3</p></td>
+<td><p>2016-08-17T19:02Z</p></td>
+<td><p>db</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7255">DM-7255</a></p></td>
+<td><p>Butler Policy class needs to search for policies similar to pex_policy</p></td>
+<td><p>2016-08-29T21:02Z</p></td>
+<td><p>obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7256">DM-7256</a></p></td>
+<td><p>Port Shapelet to Python 3</p></td>
+<td><p>2016-08-19T17:25Z</p></td>
+<td><p>shapelet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7258">DM-7258</a></p></td>
+<td><p>Port coadd_utils to Python 3 and update unit tests for pytest</p></td>
+<td><p>2016-08-20T20:06Z</p></td>
+<td><p>coadd_utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7262">DM-7262</a></p></td>
+<td><p>Port meas_base to Python 3</p></td>
+<td><p>2016-08-23T22:56Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7270">DM-7270</a></p></td>
+<td><p>Cleanup utils tests to after pytest conversion</p></td>
+<td><p>2016-08-30T21:49Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7289">DM-7289</a></p></td>
+<td><p>Port meas_algorithms to python 3</p></td>
+<td><p>2016-08-30T19:03Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7302">DM-7302</a></p></td>
+<td><p>Port meas_extensions_psfex to Python 3</p></td>
+<td><p>2016-09-06T02:01Z</p></td>
+<td><p>meas_extensions_psfex</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7303">DM-7303</a></p></td>
+<td><p>Port meas_deblender to Python 3</p></td>
+<td><p>2016-09-06T01:13Z</p></td>
+<td><p>meas_deblender</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7312">DM-7312</a></p></td>
+<td><p>Pex_policy tests do not run properly unless you are in the pex_policy directory</p></td>
+<td><p>2016-08-20T20:40Z</p></td>
+<td><p>pex_policy</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7320">DM-7320</a></p></td>
+<td><p>Modify ip_diffim to support pytest</p></td>
+<td><p>2016-08-24T01:06Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7343">DM-7343</a></p></td>
+<td><p>Modify meas_extensions_psfex tests to support pytest</p></td>
+<td><p>2016-08-23T22:05Z</p></td>
+<td><p>meas_extensions_psfex</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7346">DM-7346</a></p></td>
+<td><p>Modify obs_sdss to support pytest</p></td>
+<td><p>2016-09-01T15:06Z</p></td>
+<td><p>obs_sdss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7347">DM-7347</a></p></td>
+<td><p>Modify meas_deblender tests to support pytest</p></td>
+<td><p>2016-08-23T22:09Z</p></td>
+<td><p>meas_deblender</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7358">DM-7358</a></p></td>
+<td><p>Modify meas_modelfit tests to support pytest</p></td>
+<td><p>2016-08-24T13:16Z</p></td>
+<td><p>meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7377">DM-7377</a></p></td>
+<td><p>meas_base testMonteCarlo randomly triggers recursion on Python 3</p></td>
+<td><p>2016-08-24T22:07Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7378">DM-7378</a></p></td>
+<td><p>Modify obs_subaru tests to support pytest</p></td>
+<td><p>2016-08-25T17:05Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7428">DM-7428</a></p></td>
+<td><p>Update pipe_tasks’ testTransform to use catalogCalculation rather than afterburner</p></td>
+<td><p>2016-08-29T23:27Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7474">DM-7474</a></p></td>
+<td><p>Numerical issue in afw’s ChebyshevBoundedFieldTestCase</p></td>
+<td><p>2016-09-02T20:13Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7509">DM-7509</a></p></td>
+<td><p>Logging system sensitive to %s in string</p></td>
+<td><p>2016-09-03T19:40Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7534">DM-7534</a></p></td>
+<td><p>Random failure of afw testBox.py</p></td>
+<td><p>2016-09-06T21:21Z</p></td>
+<td><p>afw</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v12_1.html" class="btn btn-neutral float-left" title="v12_1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v12_0_0.html" class="btn btn-neutral float-right" title="v12_0_0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

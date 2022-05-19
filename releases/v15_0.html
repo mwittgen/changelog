@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v15_0 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v15_0_rc3" href="v15_0_rc3.html" />
+    <link rel="prev" title="v16_0_rc1" href="v16_0_rc1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc1.html">v22_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0.html">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v14_0.html">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1_rc1.html">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_rc1.html">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v15_0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v15_0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v15-0">
+<h1>v15_0<a class="headerlink" href="#v15-0" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2018-04-06 17:54</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Added Product(s)</p></th>
+<th class="head"><p>Removed Products(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p>ci_ctio0m9</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>lsst_ci</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>validation_data_cfht</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+</tbody>
+</table>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 22%" />
+<col style="width: 5%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2948">DM-2948</a></p></td>
+<td><p>Remove explicit buildbot dependency on datarel</p></td>
+<td><p>2018-03-22T17:29Z</p></td>
+<td><p>lsst_distrib</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4814">DM-4814</a></p></td>
+<td><p>Create validation_data set for DECam validation test</p></td>
+<td><p>2016-02-02T03:13Z</p></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4889">DM-4889</a></p></td>
+<td><p>Update git-lfs repositories to point to the git-lfs documentation.</p></td>
+<td><p>2016-01-27T19:35Z</p></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5147">DM-5147</a></p></td>
+<td><p>Provide usable repos in {{validation_data_*}} packages.</p></td>
+<td><p>2016-03-22T02:08Z</p></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7321">DM-7321</a></p></td>
+<td><p>Adapt display_firefly to new Firefly API, and to py3</p></td>
+<td><p>2016-11-22T00:00Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8646">DM-8646</a></p></td>
+<td><p>Update eups build tables in display_firefly</p></td>
+<td><p>2016-12-15T18:19Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9261">DM-9261</a></p></td>
+<td><p>Update git-lfs repositories to address deprecations.</p></td>
+<td><p>2017-02-14T04:10Z</p></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9832">DM-9832</a></p></td>
+<td><p>Cleanup and unify star selector call signatures</p></td>
+<td><p>2018-05-15T00:34Z</p></td>
+<td><p>obs_ctio0m9</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10299">DM-10299</a></p></td>
+<td><p>Apply crosstalk correction in decam</p></td>
+<td><p>2018-03-26T19:28Z</p></td>
+<td><p>ip_isr, obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10495">DM-10495</a></p></td>
+<td><p>turn on travis and flake8 protections in jointcal</p></td>
+<td><p>2018-04-04T21:16Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10552">DM-10552</a></p></td>
+<td><p>Upgrade display_firefly to work with more servers</p></td>
+<td><p>2017-05-30T18:59Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10601">DM-10601</a></p></td>
+<td><p>Add reStructuredText documentation to display_firefly</p></td>
+<td><p>2017-11-30T21:50Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10902">DM-10902</a></p></td>
+<td><p>Stack demo failure with devtoolset-6</p></td>
+<td><p>2017-08-30T20:33Z</p></td>
+<td><p>lsst_dm_stack_demo</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11162">DM-11162</a></p></td>
+<td><p>Replace all use of Coord and subclasses with SpherePoint</p></td>
+<td><p>2018-03-23T00:45Z</p></td>
+<td><p>afw, astshim, coadd_utils, ip_diffim, ip_isr, jointcal, meas_algorithms, meas_astrom, meas_base, meas_extensions_convolved, meas_extensions_psfex, meas_modelfit, obs_cfht, obs_decam, obs_sdss, obs_subaru, obs_test, pipe_tasks, skymap, validate_drp</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12007">DM-12007</a></p></td>
+<td><p>Add tests to display_firefly</p></td>
+<td><p>2017-10-04T15:30Z</p></td>
+<td><p>display_firefly, display_firefly</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12354">DM-12354</a></p></td>
+<td><p>Running the deblender with multiple threads livelocks</p></td>
+<td><p>2018-03-28T15:56Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13163">DM-13163</a></p></td>
+<td><p>Refactor ap_pipe to use CmdLineTask primitives</p></td>
+<td><p>2018-03-22T19:08Z</p></td>
+<td><p>obs_base, obs_cfht, obs_ctio0m9, obs_decam, obs_sdss, obs_subaru, obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13204">DM-13204</a></p></td>
+<td><p>Create v14.0 versions of validation_data_(cfht|decam|hsc)</p></td>
+<td><p>2018-02-06T19:46Z</p></td>
+<td><p>validation_data_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13283">DM-13283</a></p></td>
+<td><p>Write test specification</p></td>
+<td><p>2018-03-25T04:25Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13493">DM-13493</a></p></td>
+<td><p>BaseSourceSelectorConfig should not filter on “interpolated”</p></td>
+<td><p>2018-04-06T22:23Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13669">DM-13669</a></p></td>
+<td><p>Track and log measurement/reference outliers separately</p></td>
+<td><p>2018-04-04T22:28Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13696">DM-13696</a></p></td>
+<td><p>Investigate to standardize image objects to Exposure class type</p></td>
+<td><p>2018-04-03T21:57Z</p></td>
+<td><p>obs_sdss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13732">DM-13732</a></p></td>
+<td><p>Ensure TaskRunner.__call__ log messages get output promptly</p></td>
+<td><p>2018-04-03T15:16Z</p></td>
+<td><p>ctrl_pool, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13768">DM-13768</a></p></td>
+<td><p>Fix firefly_client uploads to work with server on https</p></td>
+<td><p>2018-03-14T23:05Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13822">DM-13822</a></p></td>
+<td><p>Remove python_mysqlclient dependency from obs_lsstSim and obs_sdss</p></td>
+<td><p>2018-03-27T23:10Z</p></td>
+<td><p>obs_sdss</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13827">DM-13827</a></p></td>
+<td><p>ScienceSourceSelectorTask is slowly appending to a table when it can simply do the selection</p></td>
+<td><p>2018-03-20T15:42Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13834">DM-13834</a></p></td>
+<td><p>Add minimum and maximum lambda to filter properties</p></td>
+<td><p>2018-04-06T03:15Z</p></td>
+<td><p>afw, obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13844">DM-13844</a></p></td>
+<td><p>DecamNullIsrTask uses incorrect arg order in butler.put</p></td>
+<td><p>2018-03-23T17:23Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13847">DM-13847</a></p></td>
+<td><p>Investigate AST inefficiencies</p></td>
+<td><p>2018-03-24T01:05Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13854">DM-13854</a></p></td>
+<td><p>Investigate PSF cache misses</p></td>
+<td><p>2018-03-27T23:02Z</p></td>
+<td><p>afw, meas_base, pipe_tasks, utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13873">DM-13873</a></p></td>
+<td><p>Add HSC transmission curves to testdata_jointcal</p></td>
+<td><p>2018-03-22T23:56Z</p></td>
+<td><p>testdata_jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13879">DM-13879</a></p></td>
+<td><p>Include meas_mosaic in lsst_distrib</p></td>
+<td><p>2018-03-26T19:43Z</p></td>
+<td><p>lsst_distrib</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13884">DM-13884</a></p></td>
+<td><p>SpherePoint() initializes fields in the wrong order (compiler warning)</p></td>
+<td><p>2018-03-28T14:51Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13886">DM-13886</a></p></td>
+<td><p>Simplify Transform to contain a Mapping instead of a FrameSet</p></td>
+<td><p>2018-04-03T23:52Z</p></td>
+<td><p>afw, jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13891">DM-13891</a></p></td>
+<td><p>Truncation in the distance returned by afwTable.matchRaDec</p></td>
+<td><p>2018-03-28T02:41Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13900">DM-13900</a></p></td>
+<td><p>psfex headers are in src</p></td>
+<td><p>2018-04-02T19:04Z</p></td>
+<td><p>psfex</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13904">DM-13904</a></p></td>
+<td><p>Specify Eigen directory in ndarray build</p></td>
+<td><p>2018-03-27T17:26Z</p></td>
+<td><p>ndarray</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13941">DM-13941</a></p></td>
+<td><p>initial sphinx setup for most lsst packages</p></td>
+<td><p>2018-04-04T23:28Z</p></td>
+<td><p>meas_modelfit, obs_sdss, obs_test, pipe_drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-13998">DM-13998</a></p></td>
+<td><p>Enable automatic flake8 testing in skymap</p></td>
+<td><p>2018-04-04T23:23Z</p></td>
+<td><p>skymap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14001">DM-14001</a></p></td>
+<td><p>Make afw PEP8 compliant and enable auto testing</p></td>
+<td><p>2018-04-05T19:16Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14004">DM-14004</a></p></td>
+<td><p>Make astshim compliant with the -pedantic compiler flag</p></td>
+<td><p>2018-04-05T18:56Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14007">DM-14007</a></p></td>
+<td><p>Fix py2 linter error in skymap</p></td>
+<td><p>2018-04-05T05:25Z</p></td>
+<td><p>skymap</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14008">DM-14008</a></p></td>
+<td><p>Enable TransmissionCurve coaddition for HSC</p></td>
+<td><p>2018-04-06T01:18Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-14391">DM-14391</a></p></td>
+<td><p>Simplify initialization of display_firefly and firefly_client</p></td>
+<td><p>2018-05-17T22:12Z</p></td>
+<td><p>display_firefly</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v16_0_rc1.html" class="btn btn-neutral float-left" title="v16_0_rc1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v15_0_rc3.html" class="btn btn-neutral float-right" title="v15_0_rc3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

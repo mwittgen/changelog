@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v21_0_0 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v21_0_0_rc1" href="v21_0_0_rc1.html" />
+    <link rel="prev" title="v22_0_0_rc1" href="v22_0_0_rc1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc1.html">v22_0_0_rc1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0.html">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v14_0.html">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1_rc1.html">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_rc1.html">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v21_0_0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v21_0_0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v21-0-0">
+<h1>v21_0_0<a class="headerlink" href="#v21-0-0" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2020-12-08 17:18</p>
+<p>No products added/removed in this tag</p>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 44%" />
+<col style="width: 7%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-16857">DM-16857</a></p></td>
+<td><p>Convert afw.detection to numpydoc</p></td>
+<td><p>2020-12-03T20:50Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-24253">DM-24253</a></p></td>
+<td><p>Generate stack produced calibration products for HiTS</p></td>
+<td><p>2020-11-20T22:01Z</p></td>
+<td><p>astro_metadata_translator, obs_decam, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26326">DM-26326</a></p></td>
+<td><p>Remove obs dependency from ap_verify_testdata and ap_pipe_testdata</p></td>
+<td><p>2020-12-04T00:35Z</p></td>
+<td><p>ap_pipe, ap_pipe_testdata, ap_verify, ap_verify_testdata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26375">DM-26375</a></p></td>
+<td><p>Allow databases other than SQLite when running ap_verify</p></td>
+<td><p>2020-11-20T18:48Z</p></td>
+<td><p>ap_verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26590">DM-26590</a></p></td>
+<td><p>Prohibit dimension query expressions that do not reference required dependencies</p></td>
+<td><p>2020-11-17T04:04Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-26592">DM-26592</a></p></td>
+<td><p>Create “afterburner” to analyse the results of AP processing with fakes included</p></td>
+<td><p>2020-11-30T21:26Z</p></td>
+<td><p>ap_association, ap_pipe, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27064">DM-27064</a></p></td>
+<td><p>afw fails to build with pybind11 2.5 (and python 3.8)</p></td>
+<td><p>2020-11-18T01:31Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27118">DM-27118</a></p></td>
+<td><p>Switch to spawn method in ctrl_mpexec to fix ci_hsc_gen3 failing on macOS jenkins</p></td>
+<td><p>2020-11-20T20:17Z</p></td>
+<td><p>ctrl_mpexec, daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27147">DM-27147</a></p></td>
+<td><p>Add per-camera umbrella collections and levels of indirection for versioned root datasets</p></td>
+<td><p>2020-11-26T05:15Z</p></td>
+<td><p>ap_verify, ctrl_bps, ctrl_mpexec, daf_butler, obs_base, obs_subaru, pipe_tasks, skymap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27152">DM-27152</a></p></td>
+<td><p>Allow instrument-specific variants in dataIds</p></td>
+<td><p>2020-11-24T03:13Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27154">DM-27154</a></p></td>
+<td><p>Usability improvement suggestions for butler collection commands</p></td>
+<td><p>2020-11-17T01:19Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27344">DM-27344</a></p></td>
+<td><p>Add butler query-dimension-records subcommand</p></td>
+<td><p>2020-11-24T23:15Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27356">DM-27356</a></p></td>
+<td><p>Implement a minimal cutout task</p></td>
+<td><p>2020-12-07T19:33Z</p></td>
+<td><p>daf_butler, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27359">DM-27359</a></p></td>
+<td><p>Make python-derived Storable classes persistable</p></td>
+<td><p>2020-11-23T15:16Z</p></td>
+<td><p>afw, meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27364">DM-27364</a></p></td>
+<td><p>ingestIndexManager does not set up global multiprocessing value before forking, breaking multiprocessing after python 3.8. on mac</p></td>
+<td><p>2020-11-18T01:31Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27478">DM-27478</a></p></td>
+<td><p>Allow absolute URIs to be stored in datastore</p></td>
+<td><p>2020-11-18T17:23Z</p></td>
+<td><p>daf_butler, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27500">DM-27500</a></p></td>
+<td><p>add a comment in butler &amp; pipetask subcommand about more options in butler –help</p></td>
+<td><p>2020-11-18T03:25Z</p></td>
+<td><p>ctrl_mpexec, daf_butler, obs_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27501">DM-27501</a></p></td>
+<td><p>Implement generic stamp collection class</p></td>
+<td><p>2020-11-23T22:06Z</p></td>
+<td><p>daf_butler, meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27519">DM-27519</a></p></td>
+<td><p>–show history doesn’t report complete results in pipetask</p></td>
+<td><p>2020-11-15T03:07Z</p></td>
+<td><p>ctrl_mpexec, pex_config</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27523">DM-27523</a></p></td>
+<td><p>allow passed-in CLI key-value options to extend default values</p></td>
+<td><p>2020-11-30T23:50Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27541">DM-27541</a></p></td>
+<td><p>Update SSObject alert schemas</p></td>
+<td><p>2020-11-19T22:35Z</p></td>
+<td><p>alert_packet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27575">DM-27575</a></p></td>
+<td><p>requestMemory not ending up in submit files.</p></td>
+<td><p>2020-11-18T21:09Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27576">DM-27576</a></p></td>
+<td><p>wave front sensors don’t read correctly with Gen3</p></td>
+<td><p>2020-11-16T16:25Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27598">DM-27598</a></p></td>
+<td><p>Many images have few or no good pixels when running ptc.py</p></td>
+<td><p>2020-11-18T15:33Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27599">DM-27599</a></p></td>
+<td><p>Generic gen2to3 data ID translator rules need to cover both visit and exposureKey</p></td>
+<td><p>2020-11-17T22:52Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27633">DM-27633</a></p></td>
+<td><p>Add a parameters section to Pipelines</p></td>
+<td><p>2020-11-17T22:48Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27638">DM-27638</a></p></td>
+<td><p>doImport error message hides actual error</p></td>
+<td><p>2020-11-20T00:10Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27641">DM-27641</a></p></td>
+<td><p>Fix parameters in Pipelines</p></td>
+<td><p>2020-11-17T23:17Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27648">DM-27648</a></p></td>
+<td><p>Make bps’ CLI –log-level behavior consistent</p></td>
+<td><p>2020-11-19T20:49Z</p></td>
+<td><p>ctrl_bps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27653">DM-27653</a></p></td>
+<td><p>Fix “too many values to unpack” error in <cite>pipeline run</cite></p></td>
+<td><p>2020-11-19T02:49Z</p></td>
+<td><p>ctrl_mpexec, pipelines_check</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27667">DM-27667</a></p></td>
+<td><p>Pass which nodes to execute to pipetask run</p></td>
+<td><p>2020-12-07T17:58Z</p></td>
+<td><p>ctrl_mpexec</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27670">DM-27670</a></p></td>
+<td><p>Update obs_lsst/imsim filterMap config per change on DM-26138</p></td>
+<td><p>2020-11-24T01:26Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27682">DM-27682</a></p></td>
+<td><p>Allow pipetask to read quantum graph files from URIs</p></td>
+<td><p>2020-11-23T23:17Z</p></td>
+<td><p>ctrl_mpexec, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27684">DM-27684</a></p></td>
+<td><p>Add butler register-skymap subcommand</p></td>
+<td><p>2020-12-03T16:42Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27689">DM-27689</a></p></td>
+<td><p>Fix and extend mypy configuration for daf_butler</p></td>
+<td><p>2020-11-24T22:06Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27694">DM-27694</a></p></td>
+<td><p>Expand environment variables in schemeless ButlerURIs</p></td>
+<td><p>2020-11-25T18:53Z</p></td>
+<td><p>daf_butler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27783">DM-27783</a></p></td>
+<td><p>Add improvements to getInitialGoodPoints in ptc.py</p></td>
+<td><p>2020-12-03T04:09Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27784">DM-27784</a></p></td>
+<td><p>Add ability to load select nodes from a QuantumGraph</p></td>
+<td><p>2020-12-04T03:43Z</p></td>
+<td><p>ctrl_mpexec, pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27831">DM-27831</a></p></td>
+<td><p>missing () in log statement in  obs_lsst assembly.py</p></td>
+<td><p>2020-12-03T00:08Z</p></td>
+<td><p>obs_lsst</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27832">DM-27832</a></p></td>
+<td><p>Fatal errors from astro_metadata_translator in DECam</p></td>
+<td><p>2020-12-03T01:40Z</p></td>
+<td><p>astro_metadata_translator</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27840">DM-27840</a></p></td>
+<td><p>Fix confusing message from pipetask run</p></td>
+<td><p>2020-12-02T22:52Z</p></td>
+<td><p>ctrl_mpexec</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27854">DM-27854</a></p></td>
+<td><p>CpFlatNormalizationTask improperly indexes detectors</p></td>
+<td><p>2020-12-05T00:16Z</p></td>
+<td><p>cp_pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-27864">DM-27864</a></p></td>
+<td><p>Fix pipetask timeout argument type.</p></td>
+<td><p>2020-12-04T02:41Z</p></td>
+<td><p>ctrl_mpexec</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v22_0_0_rc1.html" class="btn btn-neutral float-left" title="v22_0_0_rc1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v21_0_0_rc1.html" class="btn btn-neutral float-right" title="v21_0_0_rc1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v12_0_rc1 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v11_0" href="v11_0.html" />
+    <link rel="prev" title="v12_0" href="v12_0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc1.html">v22_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0.html">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0.html">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v14_0.html">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1_rc1.html">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v12_0_rc1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v12_0_rc1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v12-0-rc1">
+<h1>v12_0_rc1<a class="headerlink" href="#v12-0-rc1" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2016-05-28 05:20</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Added Product(s)</p></th>
+<th class="head"><p>Removed Products(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>astropy</p></td>
+<td><p>GalSim</p></td>
+</tr>
+<tr class="row-odd"><td><p>ctrl_pool</p></td>
+<td><p>anaconda</p></td>
+</tr>
+<tr class="row-even"><td><p>esutil</p></td>
+<td><p>dax_dbserv</p></td>
+</tr>
+<tr class="row-odd"><td><p>galsim</p></td>
+<td><p>dax_imgserv</p></td>
+</tr>
+<tr class="row-even"><td><p>lmfit</p></td>
+<td><p>dax_metaserv</p></td>
+</tr>
+<tr class="row-odd"><td><p>mariadb</p></td>
+<td><p>dax_webserv</p></td>
+</tr>
+<tr class="row-even"><td><p>mariadbclient</p></td>
+<td><p>dax_webservcommon</p></td>
+</tr>
+<tr class="row-odd"><td><p>meas_extensions_shapeHSM</p></td>
+<td><p>expat</p></td>
+</tr>
+<tr class="row-even"><td><p>meas_extensions_simpleShape</p></td>
+<td><p>luaexpat</p></td>
+</tr>
+<tr class="row-odd"><td><p>mpi</p></td>
+<td><p>luasocket</p></td>
+</tr>
+<tr class="row-even"><td><p>mpi4py</p></td>
+<td><p>luaxmlrpc</p></td>
+</tr>
+<tr class="row-odd"><td><p>mpich</p></td>
+<td><p>mysql</p></td>
+</tr>
+<tr class="row-even"><td><p>obs_subaru</p></td>
+<td><p>mysqlclient</p></td>
+</tr>
+<tr class="row-odd"><td><p>pipe_drivers</p></td>
+<td><p>sims_dustmaps</p></td>
+</tr>
+<tr class="row-even"><td><p>python_d2to1</p></td>
+<td><p>twisted</p></td>
+</tr>
+<tr class="row-odd"><td><p>python_psutil</p></td>
+<td><p>zopeinterface</p></td>
+</tr>
+<tr class="row-even"><td><p>pyyaml</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>requests</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>scipy</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sims_maps</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>sims_skybrightness</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>sims_skybrightness_data</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>sphgeom</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>stsci_distutils</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>testdata_subaru</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 30%" />
+<col style="width: 5%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-224">DM-224</a></p></td>
+<td><p>Switch to MariaDB</p></td>
+<td><p>2016-01-06T22:47Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-991">DM-991</a></p></td>
+<td><p>add query involving a blob to the integration tests</p></td>
+<td><p>2016-03-11T12:18Z</p></td>
+<td><p>qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-1579">DM-1579</a></p></td>
+<td><p>Implement replacement for A.net index files</p></td>
+<td><p>2016-04-01T01:17Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-1709">DM-1709</a></p></td>
+<td><p>Implement result sorting for integration tests</p></td>
+<td><p>2015-07-29T22:59Z</p></td>
+<td><p>qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2060">DM-2060</a></p></td>
+<td><p>Rename TaskMsgFactory2</p></td>
+<td><p>2016-01-19T18:55Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2195">DM-2195</a></p></td>
+<td><p>Create form framework in React</p></td>
+<td><p>2015-10-29T17:17Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2334">DM-2334</a></p></td>
+<td><p>Simplify interactions with XrdOss</p></td>
+<td><p>2015-10-28T20:27Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2421">DM-2421</a></p></td>
+<td><p>Improve support for Python modules in Scons</p></td>
+<td><p>2016-01-30T00:20Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2452">DM-2452</a></p></td>
+<td><p>Replace toString() function</p></td>
+<td><p>2016-01-19T18:53Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2522">DM-2522</a></p></td>
+<td><p>Implement distributed database deletion</p></td>
+<td><p>2015-12-13T05:56Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2622">DM-2622</a></p></td>
+<td><p>Modify czar to support table deletion</p></td>
+<td><p>2015-11-20T05:59Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2624">DM-2624</a></p></td>
+<td><p>Implement DROP table in watcher</p></td>
+<td><p>2015-11-25T22:18Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2625">DM-2625</a></p></td>
+<td><p>Create service for managing watcher</p></td>
+<td><p>2015-11-25T22:58Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2699">DM-2699</a></p></td>
+<td><p>Final cleanup of Query cancellation code</p></td>
+<td><p>2016-01-09T00:38Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2733">DM-2733</a></p></td>
+<td><p>Generalize / Simplify Facade</p></td>
+<td><p>2015-09-30T07:02Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2754">DM-2754</a></p></td>
+<td><p>Write example-based documentation for multiband processing</p></td>
+<td><p>2016-03-16T02:57Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2873">DM-2873</a></p></td>
+<td><p>Handle “where objectId between”</p></td>
+<td><p>2015-10-16T22:21Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2887">DM-2887</a></p></td>
+<td><p>Fix broken IN - it now takes first element only</p></td>
+<td><p>2015-09-10T08:05Z</p></td>
+<td><p>qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2900">DM-2900</a></p></td>
+<td><p>Add queries that exercise non-box spatial constraints</p></td>
+<td><p>2016-02-18T23:25Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2915">DM-2915</a></p></td>
+<td><p>Port safe coadd clipping from HSC</p></td>
+<td><p>2015-10-29T17:17Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3037">DM-3037</a></p></td>
+<td><p>remove lsst/log wrapper from Qserv</p></td>
+<td><p>2016-01-06T17:45Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3104">DM-3104</a></p></td>
+<td><p>Add “ORDER BY” clause to lua SQL query on result table</p></td>
+<td><p>2015-07-23T09:19Z</p></td>
+<td><p>qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3105">DM-3105</a></p></td>
+<td><p>Add assertXNearlyEqual methods for image-like classes</p></td>
+<td><p>2015-11-10T01:50Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3192">DM-3192</a></p></td>
+<td><p>Re-implement watcher based on new CSS implementation</p></td>
+<td><p>2015-10-28T23:28Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3213">DM-3213</a></p></td>
+<td><p>Get ImageDifferenceTask running again</p></td>
+<td><p>2015-10-05T07:06Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3257">DM-3257</a></p></td>
+<td><p>Port flux.scaled from HSC</p></td>
+<td><p>2016-01-20T15:31Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3259">DM-3259</a></p></td>
+<td><p>Define polygon bounds for CCDs based on vignetted regions</p></td>
+<td><p>2015-11-16T20:33Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3373">DM-3373</a></p></td>
+<td><p>Port HSC code for generation of calibration products</p></td>
+<td><p>2016-03-08T21:17Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3447">DM-3447</a></p></td>
+<td><p>Improve packaging of shared libraries in scons</p></td>
+<td><p>2016-01-25T19:12Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3515">DM-3515</a></p></td>
+<td><p>Refactor DipoleMeasurement: Dipole classification to plugin</p></td>
+<td><p>2016-05-02T06:17Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3574">DM-3574</a></p></td>
+<td><p>Replace qservAdmin.py use with CssAccess</p></td>
+<td><p>2015-10-27T23:09Z</p></td>
+<td><p>qserv, qserv_testdata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3638">DM-3638</a></p></td>
+<td><p>RangeField mis-handles max &lt; min</p></td>
+<td><p>2015-10-14T19:54Z</p></td>
+<td><p>pex_config</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3766">DM-3766</a></p></td>
+<td><p>Add Butler access to calibration data in obs_decam</p></td>
+<td><p>2015-10-02T19:14Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3778">DM-3778</a></p></td>
+<td><p>Fix compiler warns in protobuf clients</p></td>
+<td><p>2015-09-09T05:34Z</p></td>
+<td><p>protobuf</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3811">DM-3811</a></p></td>
+<td><p>HSC backport: Include documentation strings for config parameters when they are dumped</p></td>
+<td><p>2015-10-10T00:18Z</p></td>
+<td><p>pex_config, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3901">DM-3901</a></p></td>
+<td><p>Update some tests to support nose and/or py.test</p></td>
+<td><p>2016-02-17T17:03Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3902">DM-3902</a></p></td>
+<td><p>Fix protobuf compiler warning with clang</p></td>
+<td><p>2015-09-19T00:12Z</p></td>
+<td><p>protobuf</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3910">DM-3910</a></p></td>
+<td><p>Run and document multi-node test with docker</p></td>
+<td><p>2015-10-14T13:29Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3911">DM-3911</a></p></td>
+<td><p>HSC backport: avoid I/O race conditions config write out</p></td>
+<td><p>2015-10-29T19:35Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3926">DM-3926</a></p></td>
+<td><p>Implement iostream-style formatting in log package</p></td>
+<td><p>2015-11-30T21:50Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3936">DM-3936</a></p></td>
+<td><p>Fix “Executive error executing job” on the cluster</p></td>
+<td><p>2015-09-29T16:32Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3943">DM-3943</a></p></td>
+<td><p>QMeta thread safety</p></td>
+<td><p>2015-09-29T20:40Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3945">DM-3945</a></p></td>
+<td><p>Simplify task queuing / Runner code</p></td>
+<td><p>2015-11-12T23:03Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3946">DM-3946</a></p></td>
+<td><p>Cleanup cancellation-related worker code</p></td>
+<td><p>2015-10-14T20:47Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3947">DM-3947</a></p></td>
+<td><p>Remove dependency on mysqldb in wmgr</p></td>
+<td><p>2015-09-29T04:51Z</p></td>
+<td><p>db, qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3949">DM-3949</a></p></td>
+<td><p>Remove dependency on mysqldb in qserv</p></td>
+<td><p>2016-02-05T04:44Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3980">DM-3980</a></p></td>
+<td><p>Post SQLAlchemy-migration tweaks</p></td>
+<td><p>2015-09-30T16:53Z</p></td>
+<td><p>db</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3985">DM-3985</a></p></td>
+<td><p>Run multinode test using docker on one unique host</p></td>
+<td><p>2016-02-12T16:35Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3986">DM-3986</a></p></td>
+<td><p>Deploy developer code on in2p3 cluster in Docker images</p></td>
+<td><p>2015-12-02T20:53Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4003">DM-4003</a></p></td>
+<td><p>Replace zookeeper CSS with mysql</p></td>
+<td><p>2015-10-12T17:26Z</p></td>
+<td><p>qserv, qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4021">DM-4021</a></p></td>
+<td><p>Replace boost::unordered_map with std::unordered_map</p></td>
+<td><p>2015-11-24T23:33Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4100">DM-4100</a></p></td>
+<td><p>Replace use of image &lt;&lt;= with [:] in python code</p></td>
+<td><p>2015-10-21T15:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4102">DM-4102</a></p></td>
+<td><p>Remove use of &lt;&lt;= from C++ code in our stack</p></td>
+<td><p>2015-10-23T21:51Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4105">DM-4105</a></p></td>
+<td><p>Update user documentation</p></td>
+<td><p>2016-01-26T20:08Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4138">DM-4138</a></p></td>
+<td><p>Re-implement packed keys in CSS</p></td>
+<td><p>2015-11-12T00:21Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4162">DM-4162</a></p></td>
+<td><p>Please implement a warper that works with a single XYTransform</p></td>
+<td><p>2015-12-14T21:55Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4171">DM-4171</a></p></td>
+<td><p>Butler: change configuration from .paf to something else</p></td>
+<td><p>2015-12-15T00:33Z</p></td>
+<td><p>obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4191">DM-4191</a></p></td>
+<td><p>Initial code change to run ISR with DECam raw data</p></td>
+<td><p>2015-11-05T17:44Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4194">DM-4194</a></p></td>
+<td><p>Python LogHandler does not pass logger name to log4cxx</p></td>
+<td><p>2015-10-29T15:35Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4197">DM-4197</a></p></td>
+<td><p>Improve Qserv master robustness for queries like “select &#64;&#64;max_allowed_packet”</p></td>
+<td><p>2015-11-04T00:58Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4204">DM-4204</a></p></td>
+<td><p>db.utils.listDbs() crashes</p></td>
+<td><p>2015-10-28T18:27Z</p></td>
+<td><p>db</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4206">DM-4206</a></p></td>
+<td><p>wmgr should delete database from inventory when dropping it</p></td>
+<td><p>2015-11-10T05:08Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4210">DM-4210</a></p></td>
+<td><p>Create documentation and examples for SafeClipAssembleCoadd</p></td>
+<td><p>2016-03-31T19:46Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4230">DM-4230</a></p></td>
+<td><p>Port HSC-1355: Improved fringe subtraction</p></td>
+<td><p>2015-11-26T17:40Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4235">DM-4235</a></p></td>
+<td><p>HSC backport: countInputs and per object variance functions</p></td>
+<td><p>2016-01-15T17:08Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4236">DM-4236</a></p></td>
+<td><p>Specify default output location for CmdLineTasks</p></td>
+<td><p>2016-03-15T14:51Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4251">DM-4251</a></p></td>
+<td><p>Please include obs_subaru in CI</p></td>
+<td><p>2016-02-03T18:09Z</p></td>
+<td><p>lsst_distrib</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4295">DM-4295</a></p></td>
+<td><p>Run and document multinode integration tests on Openstack+Docker</p></td>
+<td><p>2016-01-28T10:50Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4342">DM-4342</a></p></td>
+<td><p>Disentangle log messages from different processes</p></td>
+<td><p>2016-03-08T22:30Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4348">DM-4348</a></p></td>
+<td><p>Replace XML-RPC with in-process communication</p></td>
+<td><p>2015-12-08T01:31Z</p></td>
+<td><p>qserv, qserv, qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4361">DM-4361</a></p></td>
+<td><p>obs_sdss fails tests trying to import six</p></td>
+<td><p>2015-11-17T23:40Z</p></td>
+<td><p>obs_sdss</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4373">DM-4373</a></p></td>
+<td><p>HSC backport: Add tract conveniences</p></td>
+<td><p>2015-12-05T01:39Z</p></td>
+<td><p>coadd_utils, meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4383">DM-4383</a></p></td>
+<td><p>Avoid restarting czar when empty chunk list changes</p></td>
+<td><p>2015-12-18T17:57Z</p></td>
+<td><p>qserv, qserv_testdata</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4428">DM-4428</a></p></td>
+<td><p>Remove Task.display()</p></td>
+<td><p>2016-01-11T18:52Z</p></td>
+<td><p>base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4440">DM-4440</a></p></td>
+<td><p>Remove QSW_RESULTPATH and XROOTD_RUN_DIR if useless</p></td>
+<td><p>2016-02-24T00:15Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4529">DM-4529</a></p></td>
+<td><p>Compilation errors from CLang (Apple LLVM 7.0) in XCode 7 on MacOSX</p></td>
+<td><p>2015-12-08T00:49Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4606">DM-4606</a></p></td>
+<td><p>Support getting coordsys from a Coord</p></td>
+<td><p>2015-12-17T20:45Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4616">DM-4616</a></p></td>
+<td><p>Migrate Qserv code to stream-based logging</p></td>
+<td><p>2016-01-06T22:49Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4677">DM-4677</a></p></td>
+<td><p>Design Interfaces for Memory Management for Shared Scans</p></td>
+<td><p>2016-01-28T17:12Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4692">DM-4692</a></p></td>
+<td><p>Refactor ProcessCcdTask and sub-tasks</p></td>
+<td><p>2016-03-08T23:35Z</p></td>
+<td><p>ip_diffim, meas_algorithms, meas_algorithms, meas_astrom, meas_extensions_psfex, meas_modelfit, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4697">DM-4697</a></p></td>
+<td><p>Implement worker scheduler for shared scans</p></td>
+<td><p>2016-02-05T19:17Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4705">DM-4705</a></p></td>
+<td><p>qdisp/testQDisp fails with mariadb</p></td>
+<td><p>2015-12-18T17:21Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4753">DM-4753</a></p></td>
+<td><p>Cleanup location of anonymous namespaces</p></td>
+<td><p>2016-01-11T02:03Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4755">DM-4755</a></p></td>
+<td><p>Implement globally unique queryId</p></td>
+<td><p>2016-03-10T23:43Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4756">DM-4756</a></p></td>
+<td><p>Support human-friendly Thread ID in logging messages</p></td>
+<td><p>2016-02-26T06:12Z</p></td>
+<td><p>log, qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4768">DM-4768</a></p></td>
+<td><p>Port W16 CModel improvements from HSC</p></td>
+<td><p>2016-03-10T06:26Z</p></td>
+<td><p>meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4797">DM-4797</a></p></td>
+<td><p>SafeClipAssembleCoaddConfig.setDefaults() does not call the correct superclass</p></td>
+<td><p>2016-01-13T16:59Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4798">DM-4798</a></p></td>
+<td><p>DetectCoaddSourcesTask.scaleVariance gets wrong result</p></td>
+<td><p>2016-01-18T17:30Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4800">DM-4800</a></p></td>
+<td><p>Use simpler method of converting from Mask to FootprintSet</p></td>
+<td><p>2016-01-14T13:54Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4807">DM-4807</a></p></td>
+<td><p>Add Shared Scan Table Information to CSS</p></td>
+<td><p>2016-01-23T07:31Z</p></td>
+<td><p>qserv, qserv_testdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4816">DM-4816</a></p></td>
+<td><p>Please add a way to get a Filter’s canonical name</p></td>
+<td><p>2016-03-05T00:22Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4830">DM-4830</a></p></td>
+<td><p>Add error handling to PsfFitter in meas::modelfit</p></td>
+<td><p>2016-01-30T17:00Z</p></td>
+<td><p>meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4831">DM-4831</a></p></td>
+<td><p>Add bright object masks to pipeline outputs</p></td>
+<td><p>2016-03-15T23:52Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4841">DM-4841</a></p></td>
+<td><p>Use high S/N band as reference for multiband forced photometry</p></td>
+<td><p>2016-03-15T20:21Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4855">DM-4855</a></p></td>
+<td><p>Meta ticket for HSC MPI high level task port</p></td>
+<td><p>2016-03-08T16:06Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4881">DM-4881</a></p></td>
+<td><p>Check that image and mask have the same size when computing statistics</p></td>
+<td><p>2016-01-23T18:03Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4887">DM-4887</a></p></td>
+<td><p>Refactor measurement afterburners into a new plugin system</p></td>
+<td><p>2016-04-26T17:26Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4889">DM-4889</a></p></td>
+<td><p>Update git-lfs repositories to point to the git-lfs documentation.</p></td>
+<td><p>2016-01-27T19:34Z</p></td>
+<td><p>afwdata</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4931">DM-4931</a></p></td>
+<td><p>Qserv build fails on El Capitan with missing OpenSSL</p></td>
+<td><p>2016-02-04T20:46Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4943">DM-4943</a></p></td>
+<td><p>Switch to MemManReal in the worker scheduler</p></td>
+<td><p>2016-02-26T22:42Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5006">DM-5006</a></p></td>
+<td><p>remove REUSE_DATAREPO in testCoadds in pipe_tasks</p></td>
+<td><p>2016-03-10T21:33Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5022">DM-5022</a></p></td>
+<td><p>Modernize python code in Qserv scons package</p></td>
+<td><p>2016-02-05T17:33Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5030">DM-5030</a></p></td>
+<td><p>Tests fail on Qserv on OS X El Capitan because of SIP</p></td>
+<td><p>2016-02-05T03:12Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5125">DM-5125</a></p></td>
+<td><p>qserv fails when it mixes mariadb and mariadbclient directories</p></td>
+<td><p>2016-02-11T15:42Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5161">DM-5161</a></p></td>
+<td><p>HSC backport: Support a full background model when detecting cosmic rays</p></td>
+<td><p>2016-02-29T20:46Z</p></td>
+<td><p>meas_algorithms, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5164">DM-5164</a></p></td>
+<td><p>Tests in daf_persistence should skip properly</p></td>
+<td><p>2016-02-19T04:51Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5197">DM-5197</a></p></td>
+<td><p>Test and robustify shapelet PSF approximations</p></td>
+<td><p>2016-05-13T15:14Z</p></td>
+<td><p>meas_modelfit, shapelet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5202">DM-5202</a></p></td>
+<td><p>Remove LOGF macros from log package</p></td>
+<td><p>2016-02-20T07:56Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5206">DM-5206</a></p></td>
+<td><p>Please do not write garbage to the FITS EQUINOX</p></td>
+<td><p>2016-02-26T23:58Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5209">DM-5209</a></p></td>
+<td><p>Improve worker configuration files.</p></td>
+<td><p>2016-04-29T20:54Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5272">DM-5272</a></p></td>
+<td><p>log package no longer builds on OS X</p></td>
+<td><p>2016-03-01T17:00Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5280">DM-5280</a></p></td>
+<td><p>Port HSC afw changesets to LSST</p></td>
+<td><p>2016-03-14T17:48Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5282">DM-5282</a></p></td>
+<td><p>Port HSC meas_algorithms changesets to LSST</p></td>
+<td><p>2016-03-17T18:44Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5284">DM-5284</a></p></td>
+<td><p>Port HSC meas_extensions_simpleShape package to LSST</p></td>
+<td><p>2016-03-31T20:55Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5287">DM-5287</a></p></td>
+<td><p>Port HSC ip_isr changesets to LSST</p></td>
+<td><p>2016-03-14T15:13Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5296">DM-5296</a></p></td>
+<td><p>Rewrite unit tests for new dipole measurement task</p></td>
+<td><p>2016-04-29T00:59Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5307">DM-5307</a></p></td>
+<td><p>Get high volume test script working again at IN2P3 cluster</p></td>
+<td><p>2016-04-02T18:02Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5308">DM-5308</a></p></td>
+<td><p>Test removal of response queuing on czar to see if this provides useful flow control</p></td>
+<td><p>2016-03-18T18:16Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5314">DM-5314</a></p></td>
+<td><p>Implement unique query-id generation</p></td>
+<td><p>2016-03-04T19:27Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5323">DM-5323</a></p></td>
+<td><p>estimateBackground should not make a deep copy of the exposure</p></td>
+<td><p>2016-05-05T00:01Z</p></td>
+<td><p>ip_diffim, meas_algorithms, meas_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5348">DM-5348</a></p></td>
+<td><p>Get rid of ProcessCcdSdssTask and ProcessCcdDecamTask</p></td>
+<td><p>2016-03-09T22:13Z</p></td>
+<td><p>ip_isr, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5355">DM-5355</a></p></td>
+<td><p>meas_algorithms uses packages that are not listed in table file</p></td>
+<td><p>2016-03-08T01:17Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5369">DM-5369</a></p></td>
+<td><p>ip_diffim has unlisted dependencies</p></td>
+<td><p>2016-03-17T04:15Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5385">DM-5385</a></p></td>
+<td><p>calib_psfReserved is only defined when candidate reservation is activated</p></td>
+<td><p>2016-03-09T19:43Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5419">DM-5419</a></p></td>
+<td><p>ci_hsc fails test requiring &gt;95% of PSF stars to be stars on the coadd</p></td>
+<td><p>2016-03-11T07:15Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5427">DM-5427</a></p></td>
+<td><p>SingleFrameVariancePlugin can give numpy warnings</p></td>
+<td><p>2016-05-17T15:43Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5452">DM-5452</a></p></td>
+<td><p>create support in Butler for multiple repositories</p></td>
+<td><p>2016-03-16T22:56Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5463">DM-5463</a></p></td>
+<td><p>Don’t restore the mask in CharacterizeImageTask.characterize</p></td>
+<td><p>2016-04-29T22:58Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5514">DM-5514</a></p></td>
+<td><p>Validate shared scan implementation on IN2P3 cluster</p></td>
+<td><p>2016-04-29T18:21Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5532">DM-5532</a></p></td>
+<td><p>Change star selectors to return stars instead of PSF candidates</p></td>
+<td><p>2016-03-30T16:29Z</p></td>
+<td><p>ip_diffim, meas_algorithms, meas_astrom, meas_extensions_psfex, meas_modelfit, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5641">DM-5641</a></p></td>
+<td><p>finish up afw.table to astropy.table view support</p></td>
+<td><p>2016-05-17T16:06Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5643">DM-5643</a></p></td>
+<td><p>add method to convert Property[Set,List] to nested dict</p></td>
+<td><p>2016-05-06T18:22Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5663">DM-5663</a></p></td>
+<td><p>Config override fixes needed due to new star selector</p></td>
+<td><p>2016-04-01T14:39Z</p></td>
+<td><p>meas_extensions_psfex</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5753">DM-5753</a></p></td>
+<td><p>XCode 7.3 can not link indirect dependencies that use &#64;rpath</p></td>
+<td><p>2016-04-08T23:49Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5776">DM-5776</a></p></td>
+<td><p>Bad logic in data unpersisting in calibrate.py</p></td>
+<td><p>2016-04-18T20:32Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5810">DM-5810</a></p></td>
+<td><p>Update imageDifferenceTask to cast template ids and use ObjectSizeStarSelector</p></td>
+<td><p>2016-04-20T18:30Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5879">DM-5879</a></p></td>
+<td><p>Remove use of Boost smart pointers throughout the Science Pipelines</p></td>
+<td><p>2016-05-04T18:26Z</p></td>
+<td><p>afw, base, daf_base, daf_persistence, ip_diffim, ip_isr, meas_algorithms, meas_astrom, meas_base, meas_deblender, meas_extensions_psfex, meas_modelfit, pex_exceptions, pex_policy, shapelet, utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5909">DM-5909</a></p></td>
+<td><p>After the first result set is returned, have the thread leave the pool.</p></td>
+<td><p>2016-05-17T21:42Z</p></td>
+<td><p>qserv</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5979">DM-5979</a></p></td>
+<td><p>tests in testArgumentParser.py fail Jenkins run-rebuild on nfs</p></td>
+<td><p>2016-05-10T19:13Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6078">DM-6078</a></p></td>
+<td><p>Aperture correction fails to measure a correction for the final plugin in the list and reports misleading errors</p></td>
+<td><p>2016-05-17T14:48Z</p></td>
+<td><p>meas_algorithms, obs_sdss, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6147">DM-6147</a></p></td>
+<td><p>Set SUSPECT mask in ISR task and make saturation a double</p></td>
+<td><p>2016-05-23T17:00Z</p></td>
+<td><p>afw, ip_isr</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v12_0.html" class="btn btn-neutral float-left" title="v12_0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v11_0.html" class="btn btn-neutral float-right" title="v11_0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>v14_0 &mdash; Rubin Git Changelog  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+        <script src="../_static/main.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="v13_0" href="v13_0.html" />
+    <link rel="prev" title="v15_0_rc1" href="v15_0_rc1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Rubin Git Changelog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Release ChangeLog</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../weekly/index.html">Weekly Releases</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Releases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="products.html">Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc3.html">v23_0_2_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc2.html">v23_0_2_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_2_rc1.html">v23_0_2_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1.html">v23_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc4.html">v23_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc3.html">v23_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc2.html">v23_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_1_rc1.html">v23_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0.html">v23_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc5.html">v23_0_0_rc5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc4.html">v23_0_0_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc3.html">v23_0_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc2.html">v23_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v23_0_0_rc1.html">v23_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1.html">v22_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc4.html">v22_0_1_rc4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc3.html">v22_0_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc2.html">v22_0_1_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_1_rc1.html">v22_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0.html">v22_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc2.html">v22_0_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v22_0_0_rc1.html">v22_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0.html">v21_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v21_0_0_rc1.html">v21_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0.html">v20_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v20_0_0_rc1.html">v20_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0.html">v19_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v19_0_0_rc1.html">v19_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0.html">v18_1_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_1_0_rc1.html">v18_1_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0.html">v18_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v18_0_0_rc1.html">v18_0_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1.html">v17_0_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_1_rc1.html">v17_0_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0.html">v17_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc2.html">v17_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v17_0_rc1.html">v17_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0.html">v16_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc2.html">v16_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v16_0_rc1.html">v16_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0.html">v15_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc3.html">v15_0_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc2.html">v15_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v15_0_rc1.html">v15_0_rc1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v14_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v13_0.html">v13_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1.html">v12_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_1_rc1.html">v12_1_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_0.html">v12_0_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0.html">v12_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v12_0_rc1.html">v12_0_rc1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0.html">v11_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v11_0_rc2.html">v11_0_rc2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1.html">v10_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_1_rc3.html">v10_1_rc3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v10_0.html">v10_0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v9_2.html">v9_2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rubin Git Changelog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Releases</a> &raquo;</li>
+      <li>v14_0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/releases/v14_0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="v14-0">
+<h1>v14_0<a class="headerlink" href="#v14-0" title="Permalink to this headline">¶</a></h1>
+<p>Released at 2017-09-07 12:30</p>
+<p>No products added/removed in this tag</p>
+<table class="datatable docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 4%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ticket</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Last Merge</p></th>
+<th class="head"><p>Product</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-430">DM-430</a></p></td>
+<td><p>Control log levels on a per-plugin basis</p></td>
+<td><p>2017-04-24T14:13Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-2186">DM-2186</a></p></td>
+<td><p>Move astrometry_net wrapper code from meas_astrom to a new package</p></td>
+<td><p>2017-04-28T16:34Z</p></td>
+<td><p>jointcal, meas_astrom, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-3705">DM-3705</a></p></td>
+<td><p>Update ndarray to use current numpy API</p></td>
+<td><p>2017-07-18T22:55Z</p></td>
+<td><p>ndarray</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4043">DM-4043</a></p></td>
+<td><p>update memory management in jointcal</p></td>
+<td><p>2017-05-08T22:50Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4232">DM-4232</a></p></td>
+<td><p>Variance is set after dark subtraction</p></td>
+<td><p>2017-03-30T03:12Z</p></td>
+<td><p>ip_isr, obs_cfht, obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4639">DM-4639</a></p></td>
+<td><p>modernize afw code and reduce doxygen errors</p></td>
+<td><p>2017-04-28T06:04Z</p></td>
+<td><p>afw, ip_diffim, meas_algorithms, meas_astrom, meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4642">DM-4642</a></p></td>
+<td><p>Migrate scisql and mysqlproxy to mariadb</p></td>
+<td><p>2016-01-06T22:44Z</p></td>
+<td><p>mysqlproxy</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4786">DM-4786</a></p></td>
+<td><p>Packge mysqlproxy 0.8.5</p></td>
+<td><p>2016-01-12T21:15Z</p></td>
+<td><p>mysqlproxy</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-4953">DM-4953</a></p></td>
+<td><p>Please eliminate misleading warning when running scons on OSX with SIP</p></td>
+<td><p>2017-08-02T16:39Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5310">DM-5310</a></p></td>
+<td><p>Re-add fake source handling to ProcessCcdTask</p></td>
+<td><p>2017-05-10T15:47Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5466">DM-5466</a></p></td>
+<td><p>obs_decam calibration ingest uses fragile relative paths</p></td>
+<td><p>2017-03-30T22:54Z</p></td>
+<td><p>obs_decam, obs_subaru, pipe_tasks, testdata_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5637">DM-5637</a></p></td>
+<td><p>Add automated linting for GitHub pull requests</p></td>
+<td><p>2017-05-03T00:04Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5883">DM-5883</a></p></td>
+<td><p>Include more information in DECam registry</p></td>
+<td><p>2017-04-12T15:15Z</p></td>
+<td><p>obs_decam, testdata_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-5922">DM-5922</a></p></td>
+<td><p>Rework camera geometry to use the replacement for XYTransform</p></td>
+<td><p>2017-09-02T19:14Z</p></td>
+<td><p>afw, astshim, meas_algorithms, meas_astrom, obs_base, obs_base, obs_cfht, obs_decam, obs_sdss, obs_subaru, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6626">DM-6626</a></p></td>
+<td><p>jointcal fails MemoryTestCase</p></td>
+<td><p>2017-05-05T00:35Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6718">DM-6718</a></p></td>
+<td><p>afw table and record should have useful str() and repr()</p></td>
+<td><p>2017-07-28T21:27Z</p></td>
+<td><p>afw, afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-6784">DM-6784</a></p></td>
+<td><p>Port meas_extensions_convolved from HSC</p></td>
+<td><p>2016-10-04T22:26Z</p></td>
+<td><p>meas_extensions_convolved</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7070">DM-7070</a></p></td>
+<td><p>Move consts from top of Associations.cc into JointcalConfig</p></td>
+<td><p>2017-04-05T23:22Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7133">DM-7133</a></p></td>
+<td><p>Switch stack from mysqlpython to mysqlclient python package</p></td>
+<td><p>2016-12-14T22:44Z</p></td>
+<td><p>scisql</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7199">DM-7199</a></p></td>
+<td><p>afwTable’s .getX()/.getY() do not appear in dir()</p></td>
+<td><p>2017-06-08T00:05Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7268">DM-7268</a></p></td>
+<td><p>Record source measurement time in the metadata</p></td>
+<td><p>2017-09-06T18:05Z</p></td>
+<td><p>ip_diffim, meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7363">DM-7363</a></p></td>
+<td><p>convert stack packages from paf policy to yaml policy</p></td>
+<td><p>2017-06-01T14:07Z</p></td>
+<td><p>daf_persistence, obs_test</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7457">DM-7457</a></p></td>
+<td><p>daf_persistence 3e6e15d fails build</p></td>
+<td><p>2017-08-08T13:37Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7468">DM-7468</a></p></td>
+<td><p>Work on Swift Butler Storage Trial</p></td>
+<td><p>2017-05-31T22:27Z</p></td>
+<td><p>daf_persistence, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7477">DM-7477</a></p></td>
+<td><p>Increase mask plane size to 32 bits</p></td>
+<td><p>2017-07-13T14:28Z</p></td>
+<td><p>afw, coadd_utils, ip_diffim, meas_algorithms, meas_base, meas_deblender, obs_decam, obs_sdss, obs_subaru, pipe_drivers, pipe_tasks, utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7611">DM-7611</a></p></td>
+<td><p>Implement spatially varying decorrelation kernel in ip_diffim</p></td>
+<td><p>2017-03-30T23:57Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7615">DM-7615</a></p></td>
+<td><p>Update tests in shapelet to support pytest</p></td>
+<td><p>2017-08-13T21:10Z</p></td>
+<td><p>shapelet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-7913">DM-7913</a></p></td>
+<td><p>Implement RFC-240: make Angle’s named methods const…</p></td>
+<td><p>2017-03-11T00:50Z</p></td>
+<td><p>afw, obs_sdss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8083">DM-8083</a></p></td>
+<td><p>The eups mariadb and mariadbclient packages don’t build on Mac OS X El Capitan with XCode 8.</p></td>
+<td><p>2016-10-26T19:01Z</p></td>
+<td><p>mariadb</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8108">DM-8108</a></p></td>
+<td><p>Update stack code to use new Footprint API</p></td>
+<td><p>2017-04-26T17:58Z</p></td>
+<td><p>afw, ip_diffim, ip_isr, meas_algorithms, meas_base, meas_deblender, meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8145">DM-8145</a></p></td>
+<td><p>Implement spatially varying ZOGY</p></td>
+<td><p>2017-05-09T23:16Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8432">DM-8432</a></p></td>
+<td><p>Empty Mapper location templates are not detected</p></td>
+<td><p>2017-08-26T00:24Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8439">DM-8439</a></p></td>
+<td><p>Add wrapper on astshim to take point lists</p></td>
+<td><p>2017-03-13T23:38Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8440">DM-8440</a></p></td>
+<td><p>Create new Wcs class</p></td>
+<td><p>2017-05-02T23:21Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8467">DM-8467</a></p></td>
+<td><p>Wrap lsst_distrib with pybind11</p></td>
+<td><p>2017-03-07T20:42Z</p></td>
+<td><p>afw, base, coadd_utils, ctrl_orca, daf_base, daf_persistence, display_ds9, ip_diffim, ip_isr, log, lsst_apps, meas_algorithms, meas_astrom, meas_base, meas_deblender, meas_extensions_psfex, ndarray, obs_base, obs_cfht, obs_decam, obs_sdss, obs_subaru, obs_test, pex_config, pex_exceptions, pex_policy, pipe_drivers, pipe_tasks, pybind11, shapelet, utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8491">DM-8491</a></p></td>
+<td><p>Add Psf-matched CTEs and Coadds as independent data products in DRP</p></td>
+<td><p>2017-05-25T20:58Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8560">DM-8560</a></p></td>
+<td><p>Update Scons package to v3.0</p></td>
+<td><p>2017-09-02T15:04Z</p></td>
+<td><p>galsim, scons, tmv</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8606">DM-8606</a></p></td>
+<td><p>Improve call signature for makeCameraPoint</p></td>
+<td><p>2017-05-23T21:27Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8686">DM-8686</a></p></td>
+<td><p>Change Child Repo Access to Parent Registries</p></td>
+<td><p>2017-03-15T22:26Z</p></td>
+<td><p>daf_persistence, obs_base, obs_decam, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8688">DM-8688</a></p></td>
+<td><p>testPsfSelectTest fails when run with via “pytest <a href="#id1"><span class="problematic" id="id2">*</span></a>.py”</p></td>
+<td><p>2017-08-14T17:14Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8750">DM-8750</a></p></td>
+<td><p>eliminate jointcal compile warnings</p></td>
+<td><p>2017-06-08T00:12Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-8842">DM-8842</a></p></td>
+<td><p>LeastSqFitter1d(…, unsigned int order) should be signed</p></td>
+<td><p>2017-04-28T21:18Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9111">DM-9111</a></p></td>
+<td><p>Add rotator information to HSC VisitInfo</p></td>
+<td><p>2017-03-20T22:36Z</p></td>
+<td><p>afw, obs_subaru, obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9135">DM-9135</a></p></td>
+<td><p>bulk rename of jointcal variables</p></td>
+<td><p>2017-06-06T20:50Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9140">DM-9140</a></p></td>
+<td><p>Ensure __str__ and __repr__ copied from Swig</p></td>
+<td><p>2017-03-09T21:41Z</p></td>
+<td><p>afw, meas_modelfit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9153">DM-9153</a></p></td>
+<td><p>Add metadata access to get filter, bbox, and detector</p></td>
+<td><p>2017-07-24T22:14Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9187">DM-9187</a></p></td>
+<td><p>port jointcal to pybind11</p></td>
+<td><p>2017-03-17T19:40Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9190">DM-9190</a></p></td>
+<td><p>Cleanup pybind11 remaining code</p></td>
+<td><p>2017-04-06T21:57Z</p></td>
+<td><p>base, coadd_utils, display_ds9, ip_diffim, ip_isr, meas_base, meas_extensions_psfex, obs_subaru, shapelet</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9192">DM-9192</a></p></td>
+<td><p>Implement new spatially-variable PhotoCalib model</p></td>
+<td><p>2017-04-28T21:42Z</p></td>
+<td><p>afw, meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9195">DM-9195</a></p></td>
+<td><p>Implement improved jointcal photometric fit</p></td>
+<td><p>2017-10-10T23:55Z</p></td>
+<td><p>jointcal, obs_cfht, obs_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9229">DM-9229</a></p></td>
+<td><p>Pad Psfs before PSF-matching</p></td>
+<td><p>2017-04-03T20:10Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9237">DM-9237</a></p></td>
+<td><p>Port stack demo to Python 3</p></td>
+<td><p>2017-02-02T18:29Z</p></td>
+<td><p>lsst_dm_stack_demo</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9249">DM-9249</a></p></td>
+<td><p>Modify FlagHandler C++ and flagDecorator.py to make flag identification robust</p></td>
+<td><p>2017-03-03T21:06Z</p></td>
+<td><p>meas_base, meas_modelfit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9297">DM-9297</a></p></td>
+<td><p>Get jointcal to work with pytest</p></td>
+<td><p>2017-05-02T19:53Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9364">DM-9364</a></p></td>
+<td><p>wcs creation is mandatory</p></td>
+<td><p>2017-06-09T16:29Z</p></td>
+<td><p>obs_base, obs_cfht, obs_decam, obs_sdss</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9412">DM-9412</a></p></td>
+<td><p>Diffim datasets should specify a “level”</p></td>
+<td><p>2017-05-10T17:30Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9419">DM-9419</a></p></td>
+<td><p>lsst.log documentation should cite other lsst.log documentation</p></td>
+<td><p>2017-03-02T22:14Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9438">DM-9438</a></p></td>
+<td><p>Switch default reference catalog for HSC to PS1 in LSST format</p></td>
+<td><p>2017-03-21T18:33Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9495">DM-9495</a></p></td>
+<td><p>Fix all jointcal header multiple-inclusion #defines</p></td>
+<td><p>2017-05-09T22:07Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9506">DM-9506</a></p></td>
+<td><p>Make astrometry distortion model configurable</p></td>
+<td><p>2017-05-24T23:45Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9530">DM-9530</a></p></td>
+<td><p>Create metric definitions package</p></td>
+<td><p>2017-02-28T03:33Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9531">DM-9531</a></p></td>
+<td><p>Fix override warnings in afw</p></td>
+<td><p>2017-03-03T16:43Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9532">DM-9532</a></p></td>
+<td><p>Create a metric definitions access API</p></td>
+<td><p>2017-04-13T18:55Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9541">DM-9541</a></p></td>
+<td><p>Bug related to MPI pickling when running coaddDriver</p></td>
+<td><p>2017-03-20T15:15Z</p></td>
+<td><p>ctrl_pool</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9542">DM-9542</a></p></td>
+<td><p>Add initial jointcal metrics to validation_metrics</p></td>
+<td><p>2017-03-16T23:57Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9559">DM-9559</a></p></td>
+<td><p>Create a specifications access API for validate_metrics specs</p></td>
+<td><p>2017-04-11T23:22Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9567">DM-9567</a></p></td>
+<td><p>Create Donut Fit Pipeline</p></td>
+<td><p>2017-05-19T20:47Z</p></td>
+<td><p>afw, obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9572">DM-9572</a></p></td>
+<td><p>Include instrument model in cameraGeom</p></td>
+<td><p>2017-04-14T18:32Z</p></td>
+<td><p>afw, obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9595">DM-9595</a></p></td>
+<td><p>Allow Transform to return its inverse</p></td>
+<td><p>2017-03-27T20:33Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9598">DM-9598</a></p></td>
+<td><p>Allow Transform to return a matrix of derivatives</p></td>
+<td><p>2017-03-29T23:26Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9599">DM-9599</a></p></td>
+<td><p>Support concatenation of Transforms</p></td>
+<td><p>2017-04-13T20:22Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9606">DM-9606</a></p></td>
+<td><p>Fix validate.metrics Python import</p></td>
+<td><p>2017-02-28T23:40Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9747">DM-9747</a></p></td>
+<td><p>Fix build error in obs_lsstSim</p></td>
+<td><p>2017-03-10T01:02Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9751">DM-9751</a></p></td>
+<td><p>Verify the performance of new matchPessimisticB code on selected test fields</p></td>
+<td><p>2017-06-06T17:51Z</p></td>
+<td><p>meas_algorithms, meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9752">DM-9752</a></p></td>
+<td><p>Add jointcal to lsst_distrib</p></td>
+<td><p>2017-03-22T22:57Z</p></td>
+<td><p>lsst_distrib</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9758">DM-9758</a></p></td>
+<td><p>astshim fails to build on linux</p></td>
+<td><p>2017-03-13T19:05Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9764">DM-9764</a></p></td>
+<td><p>SOURCE_IO_NO_FOOTPRINTS and related enums should be properly wrapped in pybind11</p></td>
+<td><p>2017-03-17T15:07Z</p></td>
+<td><p>afw, meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9765">DM-9765</a></p></td>
+<td><p>Suspicious numerical precision code in Angle</p></td>
+<td><p>2017-05-25T03:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9792">DM-9792</a></p></td>
+<td><p>Mapping::getInverse not exception-safe</p></td>
+<td><p>2017-03-16T14:52Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9795">DM-9795</a></p></td>
+<td><p>CModel priors are weighted incorrectly relative to likelihood</p></td>
+<td><p>2017-03-29T21:26Z</p></td>
+<td><p>meas_modelfit, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9812">DM-9812</a></p></td>
+<td><p>Clean up outputs from CharacterizeImageTask and CalibrateTask</p></td>
+<td><p>2017-03-22T01:59Z</p></td>
+<td><p>meas_astrom, obs_base, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9817">DM-9817</a></p></td>
+<td><p>Doxygen tries to parse pybind11 wrappers</p></td>
+<td><p>2017-09-21T18:06Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9828">DM-9828</a></p></td>
+<td><p>Enable rectangular binSizes in SubtractBackgroundTask</p></td>
+<td><p>2017-03-31T17:04Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9846">DM-9846</a></p></td>
+<td><p>Improve handling of error messages</p></td>
+<td><p>2017-03-22T17:17Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9853">DM-9853</a></p></td>
+<td><p>Clean up makeVisitInfo docstring</p></td>
+<td><p>2017-03-17T21:36Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9862">DM-9862</a></p></td>
+<td><p>Update meas_mosaic’s wcs/fcr output files to reflect LSST coordinate system</p></td>
+<td><p>2017-04-20T21:14Z</p></td>
+<td><p>afw, meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9863">DM-9863</a></p></td>
+<td><p>Replace use of makeVisitInfo(… with VisitInfo(…)</p></td>
+<td><p>2017-03-21T15:16Z</p></td>
+<td><p>ip_isr, obs_base, obs_cfht, obs_decam, obs_subaru, obs_test, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9877">DM-9877</a></p></td>
+<td><p>Refactor existing validate_base specification into a ThresholdSpecification</p></td>
+<td><p>2017-04-11T23:19Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9882">DM-9882</a></p></td>
+<td><p>Add integrate interface to BoundedField/ChebyshevBoundedField</p></td>
+<td><p>2017-03-29T03:16Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9885">DM-9885</a></p></td>
+<td><p>Rename deepCoadd_srcMatch as deepCoadd_measMatch</p></td>
+<td><p>2017-03-24T00:18Z</p></td>
+<td><p>obs_base, obs_cfht, obs_decam, obs_sdss, obs_subaru, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9895">DM-9895</a></p></td>
+<td><p>FrameSet frames not preserved by Transform(frameSet) constructor</p></td>
+<td><p>2017-03-23T03:52Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9899">DM-9899</a></p></td>
+<td><p>FrameSet.permAxes will fail if nIn != nOut</p></td>
+<td><p>2017-03-22T10:15Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9918">DM-9918</a></p></td>
+<td><p>Robustify sqlite use</p></td>
+<td><p>2017-04-24T21:55Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9925">DM-9925</a></p></td>
+<td><p>PolyTran should not provide an iterative inverse by default</p></td>
+<td><p>2017-03-29T18:28Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9927">DM-9927</a></p></td>
+<td><p>Upgrade pybind11 version to upstream v2.1.0</p></td>
+<td><p>2017-03-25T01:42Z</p></td>
+<td><p>pybind11</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9939">DM-9939</a></p></td>
+<td><p>Stop transposing data in Mapping.tranForward and tranInverse</p></td>
+<td><p>2017-05-18T16:33Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9952">DM-9952</a></p></td>
+<td><p>Change our interpretation of FITS HDUs to be 0-indexed</p></td>
+<td><p>2017-04-03T19:52Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9967">DM-9967</a></p></td>
+<td><p>ctrl_pool should not accept a default for –time on real batch systems</p></td>
+<td><p>2017-03-27T21:46Z</p></td>
+<td><p>ctrl_pool</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-9990">DM-9990</a></p></td>
+<td><p>Update Detector information as needed</p></td>
+<td><p>2017-04-01T22:40Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10000">DM-10000</a></p></td>
+<td><p>Create/revive CModel model data residuals display</p></td>
+<td><p>2017-07-10T16:22Z</p></td>
+<td><p>meas_modelfit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10008">DM-10008</a></p></td>
+<td><p>MapBox.maxOutCoord not set to nout if specified as 0 during construction</p></td>
+<td><p>2017-04-28T18:15Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10009">DM-10009</a></p></td>
+<td><p>Ensure masks are valid from ImageMapReduceTask</p></td>
+<td><p>2017-06-16T20:48Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10089">DM-10089</a></p></td>
+<td><p>Simplify validate_base Blob into a concrete collection type</p></td>
+<td><p>2017-04-11T23:25Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10091">DM-10091</a></p></td>
+<td><p>Fix problems left over from DM-9952</p></td>
+<td><p>2017-04-04T14:41Z</p></td>
+<td><p>afw, daf_persistence, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10093">DM-10093</a></p></td>
+<td><p>Revert disabling of meas_modelfit dependency in lsst_apps</p></td>
+<td><p>2017-04-05T13:19Z</p></td>
+<td><p>lsst_apps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10095">DM-10095</a></p></td>
+<td><p>Fix jointcal verification framework YAML specification definitions</p></td>
+<td><p>2017-04-11T22:57Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10096">DM-10096</a></p></td>
+<td><p>Add unit test asserts for SpherePoint, SpherePointList and PointList</p></td>
+<td><p>2017-04-06T21:42Z</p></td>
+<td><p>ip_diffim, ip_isr, meas_algorithms, meas_astrom, meas_base, meas_extensions_convolved, obs_base, obs_cfht, obs_decam, obs_test, pipe_tasks, shapelet, skymap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10105">DM-10105</a></p></td>
+<td><p>Inconsistency in meas/forced wcs leads to CModel failure</p></td>
+<td><p>2017-04-05T23:31Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10108">DM-10108</a></p></td>
+<td><p>Stop wrapping __div__ for BoundedField</p></td>
+<td><p>2017-04-21T23:08Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10113">DM-10113</a></p></td>
+<td><p>Rename validate_base to verify and validate_metrics to verify_metrics</p></td>
+<td><p>2017-04-11T22:59Z</p></td>
+<td><p>verify, verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10116">DM-10116</a></p></td>
+<td><p>Add ChebyMap to astshim</p></td>
+<td><p>2017-05-09T18:24Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10146">DM-10146</a></p></td>
+<td><p>Fix minor doc typos</p></td>
+<td><p>2017-04-18T20:32Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10195">DM-10195</a></p></td>
+<td><p>Improve comparison handling in Name and SpecificationSet classes of verify framework</p></td>
+<td><p>2017-04-13T18:54Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10199">DM-10199</a></p></td>
+<td><p>Improve Measurement class integration in lsst.verify framework</p></td>
+<td><p>2017-04-25T16:22Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10206">DM-10206</a></p></td>
+<td><p>Fix obs_decam compatibility with 0-indexed HDUs</p></td>
+<td><p>2017-04-14T01:46Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10221">DM-10221</a></p></td>
+<td><p>Allow –id to use any key in the registry</p></td>
+<td><p>2017-04-14T18:29Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10226">DM-10226</a></p></td>
+<td><p>Fix code layout in jointcal</p></td>
+<td><p>2017-06-02T20:14Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10229">DM-10229</a></p></td>
+<td><p>pipe_base tests try to write to obs_test</p></td>
+<td><p>2017-04-18T12:50Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10231">DM-10231</a></p></td>
+<td><p>FileForWriteOnceCompareSame does not respect umask</p></td>
+<td><p>2017-04-19T17:49Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10237">DM-10237</a></p></td>
+<td><p>Error in blendedness debiasing calculation</p></td>
+<td><p>2017-04-20T21:16Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10252">DM-10252</a></p></td>
+<td><p>getOutputId() assumes keys will exist, and doesn’t use butler to retrieve them</p></td>
+<td><p>2017-04-21T14:51Z</p></td>
+<td><p>pipe_drivers</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10257">DM-10257</a></p></td>
+<td><p>Fix compiler warnings in afw</p></td>
+<td><p>2017-06-23T20:27Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10261">DM-10261</a></p></td>
+<td><p>Port post-qa into lsst.verify framework</p></td>
+<td><p>2017-04-28T04:39Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10265">DM-10265</a></p></td>
+<td><p>Include table persistence docs in Doxygen listing for afw</p></td>
+<td><p>2017-04-19T14:51Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10267">DM-10267</a></p></td>
+<td><p>Port HSC support for PostgreSQL registries to LSST</p></td>
+<td><p>2017-05-10T21:19Z</p></td>
+<td><p>daf_persistence, obs_base, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10271">DM-10271</a></p></td>
+<td><p>Fix order of operations when using temporary local backgrounds in detection</p></td>
+<td><p>2017-04-22T20:15Z</p></td>
+<td><p>afw, meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10274">DM-10274</a></p></td>
+<td><p>Transform is not assignable</p></td>
+<td><p>2017-05-19T20:32Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10281">DM-10281</a></p></td>
+<td><p>compiler warnings in astshim</p></td>
+<td><p>2017-05-18T20:55Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10287">DM-10287</a></p></td>
+<td><p>Add measurement plugin to store footprint area</p></td>
+<td><p>2017-04-22T00:33Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10288">DM-10288</a></p></td>
+<td><p>afwImage.TanWcs.cast() not supported anymore in jointcalCoadd</p></td>
+<td><p>2017-05-23T22:11Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10289">DM-10289</a></p></td>
+<td><p>record.setValidPolygon(xxx) does not accept None as a valid input anymore</p></td>
+<td><p>2017-05-17T02:49Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10292">DM-10292</a></p></td>
+<td><p>The FrameSet returned by Transform.getFrameSet can change the contained FrameSet in Python</p></td>
+<td><p>2017-04-20T20:50Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10297">DM-10297</a></p></td>
+<td><p>Fix “double treerings”</p></td>
+<td><p>2017-04-25T23:01Z</p></td>
+<td><p>obs_decam, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10306">DM-10306</a></p></td>
+<td><p>Verification Framework metadata system</p></td>
+<td><p>2017-04-28T02:34Z</p></td>
+<td><p>verify, verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10315">DM-10315</a></p></td>
+<td><p>Mask bad channels in ccd=33</p></td>
+<td><p>2017-04-26T13:25Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10328">DM-10328</a></p></td>
+<td><p>len(propertySet) throws an exception in Python</p></td>
+<td><p>2017-04-27T17:48Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10336">DM-10336</a></p></td>
+<td><p>DM-10271 seems to have broken afw</p></td>
+<td><p>2017-04-25T00:43Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10338">DM-10338</a></p></td>
+<td><p>Mix of tabs and spaces in breaks meas_base builds</p></td>
+<td><p>2017-04-25T02:19Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10340">DM-10340</a></p></td>
+<td><p>parent repository properties are dropped when loaded via child repositories.</p></td>
+<td><p>2017-06-27T19:58Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10357">DM-10357</a></p></td>
+<td><p>Verification reporting facility in lsst.verify framework</p></td>
+<td><p>2017-05-25T19:30Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10359">DM-10359</a></p></td>
+<td><p>Reconstruct measurement pixels from a SourceRecord</p></td>
+<td><p>2017-07-24T20:45Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10394">DM-10394</a></p></td>
+<td><p>astshim attribute page titles have Doxygen commands</p></td>
+<td><p>2017-05-19T18:15Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10401">DM-10401</a></p></td>
+<td><p>getPackageDir raises RuntimeError instead of pex::exceptions::NotFoundError</p></td>
+<td><p>2017-05-04T21:52Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10410">DM-10410</a></p></td>
+<td><p>Update starlink_ast</p></td>
+<td><p>2017-05-05T22:21Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10429">DM-10429</a></p></td>
+<td><p>Write a version of the warper that uses SkyWcs and compare performance</p></td>
+<td><p>2017-05-17T21:17Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10430">DM-10430</a></p></td>
+<td><p>Add time stamps to the standard outputs to BatchCmdLineTask</p></td>
+<td><p>2017-05-02T18:59Z</p></td>
+<td><p>ctrl_pool, ctrl_pool</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10452">DM-10452</a></p></td>
+<td><p>Create bboxFromIraf function in obs_base utils</p></td>
+<td><p>2017-05-08T18:57Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10453">DM-10453</a></p></td>
+<td><p>Fix bugs in matchPessimisticB</p></td>
+<td><p>2017-05-11T01:03Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10469">DM-10469</a></p></td>
+<td><p>Add support for pipe_analysis in obs_subaru</p></td>
+<td><p>2017-05-22T21:19Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10485">DM-10485</a></p></td>
+<td><p>Protected methods should not use private method naming convention</p></td>
+<td><p>2017-05-19T18:33Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10496">DM-10496</a></p></td>
+<td><p>test_chebyMap.py sometimes segfaults</p></td>
+<td><p>2017-05-10T22:50Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10497">DM-10497</a></p></td>
+<td><p>Fix minor typos in main.dox</p></td>
+<td><p>2017-05-10T21:35Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10508">DM-10508</a></p></td>
+<td><p>Remove writing of warped template added in DM-8145</p></td>
+<td><p>2017-05-10T23:38Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10510">DM-10510</a></p></td>
+<td><p>Squash some compiler warnings in afw</p></td>
+<td><p>2017-05-11T19:45Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10541">DM-10541</a></p></td>
+<td><p>Add properties to image classes</p></td>
+<td><p>2017-05-18T20:55Z</p></td>
+<td><p>afw, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10542">DM-10542</a></p></td>
+<td><p>Replace XYTransform::linearizeTransform</p></td>
+<td><p>2017-06-16T20:02Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10552">DM-10552</a></p></td>
+<td><p>Upgrade display_firefly to work with more servers</p></td>
+<td><p>2017-05-30T19:04Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10561">DM-10561</a></p></td>
+<td><p>Switch to LSST capitalization and properties in Python</p></td>
+<td><p>2017-05-25T17:11Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10608">DM-10608</a></p></td>
+<td><p>Optimise Config history</p></td>
+<td><p>2017-06-14T21:17Z</p></td>
+<td><p>log, pex_config</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10610">DM-10610</a></p></td>
+<td><p>Optimise SpanSet components used by CModel</p></td>
+<td><p>2017-06-07T15:48Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10623">DM-10623</a></p></td>
+<td><p>Mismatching dataId in logger output</p></td>
+<td><p>2017-06-07T15:58Z</p></td>
+<td><p>log, pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10625">DM-10625</a></p></td>
+<td><p>lsst.verify unit test failure unique to Jenkins env</p></td>
+<td><p>2017-05-26T05:47Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10633">DM-10633</a></p></td>
+<td><p>Increase CmdLineTask multiprocessing timeout</p></td>
+<td><p>2017-05-31T23:11Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10686">DM-10686</a></p></td>
+<td><p>RingsSkyMap.findAllTracts() behaves oddly at poles</p></td>
+<td><p>2017-06-02T17:33Z</p></td>
+<td><p>skymap</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10728">DM-10728</a></p></td>
+<td><p>Near-term jointcal acceptance: make jointcal and meas_mosaic use the same output formats</p></td>
+<td><p>2017-07-28T18:44Z</p></td>
+<td><p>afw, daf_persistence, obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10737">DM-10737</a></p></td>
+<td><p>Make meas_mosaic use new reference catalogs by default</p></td>
+<td><p>2017-06-02T16:40Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10751">DM-10751</a></p></td>
+<td><p>Fix module versions</p></td>
+<td><p>2017-06-06T21:19Z</p></td>
+<td><p>base, ctrl_pool, meas_base, meas_deblender, meas_extensions_psfex, obs_decam, obs_subaru, pipe_base, pipe_drivers, pipe_tasks, shapelet, skymap</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10764">DM-10764</a></p></td>
+<td><p>Rename Transform::of and Mapping::of to ::then</p></td>
+<td><p>2017-06-02T22:03Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10767">DM-10767</a></p></td>
+<td><p>fix py3 build after tickets/DM-7363</p></td>
+<td><p>2017-06-05T19:23Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10777">DM-10777</a></p></td>
+<td><p>Create TransformBoundedField</p></td>
+<td><p>2017-07-10T19:04Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10779">DM-10779</a></p></td>
+<td><p>Implement running time metric(s)</p></td>
+<td><p>2017-08-16T23:12Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10785">DM-10785</a></p></td>
+<td><p>setBrightObjectMasks does not properly construct footprint.</p></td>
+<td><p>2017-06-02T16:40Z</p></td>
+<td><p>pipe_tasks, pipe_tasks, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10799">DM-10799</a></p></td>
+<td><p>Rename Transform::tranForward to applyForward</p></td>
+<td><p>2017-06-15T04:01Z</p></td>
+<td><p>afw, astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10803">DM-10803</a></p></td>
+<td><p>Refactor grid generation in ImageMapReduceTask</p></td>
+<td><p>2017-06-09T22:47Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10804">DM-10804</a></p></td>
+<td><p>Spatially-varying A&amp;L decorrelation option</p></td>
+<td><p>2017-06-16T22:27Z</p></td>
+<td><p>ip_diffim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10805">DM-10805</a></p></td>
+<td><p>Spatially-varying ZOGY option</p></td>
+<td><p>2017-08-28T17:35Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10834">DM-10834</a></p></td>
+<td><p>CmdLineTask -j multiprocessing hangs with long data ID lists</p></td>
+<td><p>2017-06-13T02:03Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10871">DM-10871</a></p></td>
+<td><p>Add unit test for MDC overwriting</p></td>
+<td><p>2017-06-13T15:50Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10902">DM-10902</a></p></td>
+<td><p>Stack demo failure with devtoolset-6</p></td>
+<td><p>2017-08-30T20:33Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10924">DM-10924</a></p></td>
+<td><p>Add verify (and verify_metrics) to lsst_distrib</p></td>
+<td><p>2017-06-14T14:13Z</p></td>
+<td><p>lsst_distrib, verify, verify_metrics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10926">DM-10926</a></p></td>
+<td><p>Incompatibility with NumPy 1.13</p></td>
+<td><p>2017-06-24T15:03Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10931">DM-10931</a></p></td>
+<td><p>Fix variable name bug and remove print statements in matchPessimisticB.</p></td>
+<td><p>2017-06-19T01:22Z</p></td>
+<td><p>meas_astrom</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10942">DM-10942</a></p></td>
+<td><p>MatrixMap with all zeros cannot be simplified</p></td>
+<td><p>2017-06-15T18:23Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10943">DM-10943</a></p></td>
+<td><p>References to TranForward and TranInverse are confusing</p></td>
+<td><p>2017-06-19T19:30Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10946">DM-10946</a></p></td>
+<td><p>Non-square MatrixMap composed with a ShiftMap cannot be simplified</p></td>
+<td><p>2017-06-16T18:45Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10947">DM-10947</a></p></td>
+<td><p>Allow linearizeTransform and affineTransform to simplify their mappings</p></td>
+<td><p>2017-06-19T16:39Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10953">DM-10953</a></p></td>
+<td><p>Give  ModelPsfMatchTask ablilty to match to all PSF types</p></td>
+<td><p>2017-07-14T20:29Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10965">DM-10965</a></p></td>
+<td><p>FootprintSet setter unable to accept results from getter</p></td>
+<td><p>2017-06-20T17:46Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10972">DM-10972</a></p></td>
+<td><p>update daf_persistence according to RFC-215 and RFC-229</p></td>
+<td><p>2017-07-10T19:38Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-10973">DM-10973</a></p></td>
+<td><p>Make SkyWcs transform to IcrsCoord instead of SpherePoint</p></td>
+<td><p>2017-06-22T00:48Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11008">DM-11008</a></p></td>
+<td><p>Unable to construct CoaddBoundedFieldElement without a validPolygon</p></td>
+<td><p>2017-06-27T22:56Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11009">DM-11009</a></p></td>
+<td><p>Automatic backtrace printing is unhelpful</p></td>
+<td><p>2017-06-22T16:36Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11010">DM-11010</a></p></td>
+<td><p>Footprint.transform may be transforming the wrong position</p></td>
+<td><p>2017-07-06T20:28Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11016">DM-11016</a></p></td>
+<td><p>Add standard library tag file to Doxygen</p></td>
+<td><p>2017-10-16T23:14Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11023">DM-11023</a></p></td>
+<td><p>Add more information to CoaddPsf.computePsfImage failure</p></td>
+<td><p>2017-09-25T18:31Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11052">DM-11052</a></p></td>
+<td><p>Enhance afw table to support variable-length string data</p></td>
+<td><p>2017-07-03T21:34Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11090">DM-11090</a></p></td>
+<td><p>Identify regression in HSC astrometric matching success rate between w_2017_17 and w_2017_25</p></td>
+<td><p>2017-07-21T23:22Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11095">DM-11095</a></p></td>
+<td><p>Add reference catalog flux support to photometry fitter</p></td>
+<td><p>2017-08-01T01:21Z</p></td>
+<td><p>jointcal, testdata_jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11136">DM-11136</a></p></td>
+<td><p>Fine-tune calib construction mechanics</p></td>
+<td><p>2017-07-10T23:39Z</p></td>
+<td><p>obs_base, pipe_drivers, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11137">DM-11137</a></p></td>
+<td><p>testSafeFileIO fails with too many open files on Python 3 and Terminal</p></td>
+<td><p>2017-06-30T17:16Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11163">DM-11163</a></p></td>
+<td><p>Always create VisitInfo from metadata when available</p></td>
+<td><p>2017-07-04T14:13Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11164">DM-11164</a></p></td>
+<td><p>Write suitable metadata for VisitInfo when writing calibrations</p></td>
+<td><p>2017-07-04T13:14Z</p></td>
+<td><p>pipe_drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11196">DM-11196</a></p></td>
+<td><p>Move yaml camera model to obs_base</p></td>
+<td><p>2017-07-21T21:05Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11217">DM-11217</a></p></td>
+<td><p>Butler+CmdLineTask cannot output to a (non-repo) folder where some files already exist</p></td>
+<td><p>2017-07-28T04:16Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11218">DM-11218</a></p></td>
+<td><p>ingestCalibs.py should put the registry in the output directory</p></td>
+<td><p>2017-07-06T22:47Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11220">DM-11220</a></p></td>
+<td><p>ingestImage.py should not stop after failing to ingest a file</p></td>
+<td><p>2017-07-18T18:50Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11236">DM-11236</a></p></td>
+<td><p>Image constructors do not obey INHERIT</p></td>
+<td><p>2017-07-13T00:18Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11237">DM-11237</a></p></td>
+<td><p>Please turn down verbosity of sipterms.cc test</p></td>
+<td><p>2017-07-12T18:33Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11243">DM-11243</a></p></td>
+<td><p>Refine PSF-based image selection</p></td>
+<td><p>2017-07-11T17:21Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11251">DM-11251</a></p></td>
+<td><p>add support for the standardize function for composite datasets</p></td>
+<td><p>2017-07-12T23:22Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11253">DM-11253</a></p></td>
+<td><p>Initial Sphinx docs for pipe_base</p></td>
+<td><p>2017-08-29T21:17Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11267">DM-11267</a></p></td>
+<td><p>Add an option to not interpolate over saturated pixels</p></td>
+<td><p>2017-07-13T21:08Z</p></td>
+<td><p>ip_isr</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11268">DM-11268</a></p></td>
+<td><p>Add intra-CCD crosstalk correction to ISR</p></td>
+<td><p>2017-09-06T00:24Z</p></td>
+<td><p>afw, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11280">DM-11280</a></p></td>
+<td><p>Update configs missed in DM-10469</p></td>
+<td><p>2017-07-14T18:36Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11284">DM-11284</a></p></td>
+<td><p>Butler writes many copies of identical entries _parents to repositoryCfg.yaml</p></td>
+<td><p>2017-07-27T18:36Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11326">DM-11326</a></p></td>
+<td><p>Add &lt;exposure&gt;_bbox dataset</p></td>
+<td><p>2017-07-24T22:18Z</p></td>
+<td><p>afw, obs_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11332">DM-11332</a></p></td>
+<td><p>Automatically (losslessly) compress image HDUs</p></td>
+<td><p>2017-09-09T01:52Z</p></td>
+<td><p>afw, daf_persistence, jointcal, meas_base, obs_base, obs_subaru, pipe_drivers, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11336">DM-11336</a></p></td>
+<td><p>Switch default reference catalog for DECam to PS1 in LSST format</p></td>
+<td><p>2017-08-25T16:10Z</p></td>
+<td><p>obs_decam</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11338">DM-11338</a></p></td>
+<td><p>Make choice of interpolation kernel for CoaddPsf configurable</p></td>
+<td><p>2017-07-21T21:47Z</p></td>
+<td><p>meas_algorithms, pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11356">DM-11356</a></p></td>
+<td><p>Confusion of refObjLoader.pixelMargin and matcher.maxOffsetPix</p></td>
+<td><p>2017-09-05T21:42Z</p></td>
+<td><p>meas_algorithms, meas_astrom, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11360">DM-11360</a></p></td>
+<td><p>CatalogCalculation plugins can get added in non deterministic order</p></td>
+<td><p>2017-07-25T16:52Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11401">DM-11401</a></p></td>
+<td><p>testHtmIndex.py takes over 6 minutes to run</p></td>
+<td><p>2017-08-24T20:27Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11407">DM-11407</a></p></td>
+<td><p>document formatters &amp; the plan for rollout and use in existing storages</p></td>
+<td><p>2017-09-01T21:30Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11429">DM-11429</a></p></td>
+<td><p>tests/testPhotoCal.py fails on 2017-07-31 “master”</p></td>
+<td><p>2017-08-02T23:31Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11454">DM-11454</a></p></td>
+<td><p>Modify UnitNormMap to round trip zero-length vectors</p></td>
+<td><p>2017-08-03T17:56Z</p></td>
+<td><p>astshim</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11456">DM-11456</a></p></td>
+<td><p>Write math for new photometry model in jointcal.tex</p></td>
+<td><p>2017-09-02T16:28Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11473">DM-11473</a></p></td>
+<td><p>Add SpherePoint(long, lat, unit) constructor</p></td>
+<td><p>2017-10-04T14:34Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11507">DM-11507</a></p></td>
+<td><p>Lua build fails if GNU sed is the default on Darwin</p></td>
+<td><p>2017-08-08T13:35Z</p></td>
+<td><p>lua</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11514">DM-11514</a></p></td>
+<td><p>Modify sconsUtils to use pytest for test execution</p></td>
+<td><p>2017-08-08T23:24Z</p></td>
+<td><p>afw, afw, base, meas_base, pex_config, verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11516">DM-11516</a></p></td>
+<td><p>Let Doxygen report inherited methods inline</p></td>
+<td><p>2017-09-11T21:21Z</p></td>
+<td><p>base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11518">DM-11518</a></p></td>
+<td><p>Modify db tests to support pytest</p></td>
+<td><p>2017-08-08T16:54Z</p></td>
+<td><p>db</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11521">DM-11521</a></p></td>
+<td><p>Make task config defaults sensible for all cameras</p></td>
+<td><p>2017-09-21T03:49Z</p></td>
+<td><p>obs_cfht, obs_decam, obs_sdss, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11539">DM-11539</a></p></td>
+<td><p>meas_base test_PluginLogs.py depends on global state</p></td>
+<td><p>2017-08-13T21:01Z</p></td>
+<td><p>meas_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11574">DM-11574</a></p></td>
+<td><p>Make testDistortion test the distortion</p></td>
+<td><p>2017-08-11T19:40Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11578">DM-11578</a></p></td>
+<td><p>Cleanup public:private: ordering in jointcal headers</p></td>
+<td><p>2017-10-16T20:10Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11585">DM-11585</a></p></td>
+<td><p>Add pytest support to packages</p></td>
+<td><p>2017-08-16T23:23Z</p></td>
+<td><p>coadd_utils, ctrl_execute, ctrl_orca, daf_base, geom, ip_diffim, ip_isr, meas_deblender, meas_extensions_convolved, meas_modelfit, pex_exceptions, pipe_base, skymap, utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11589">DM-11589</a></p></td>
+<td><p>pipe_tasks unit test fails under pytest</p></td>
+<td><p>2017-08-15T04:21Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11594">DM-11594</a></p></td>
+<td><p>test_distortion fails when run from pytest</p></td>
+<td><p>2017-08-16T02:36Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11595">DM-11595</a></p></td>
+<td><p>daf_persistence tests fail with pytest-xdist</p></td>
+<td><p>2017-08-18T20:09Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11597">DM-11597</a></p></td>
+<td><p>Add lsst.verify to pipelines.lsst.io</p></td>
+<td><p>2017-08-28T14:06Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11607">DM-11607</a></p></td>
+<td><p>obs_base fails with pytest-xdist</p></td>
+<td><p>2017-08-19T03:30Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11614">DM-11614</a></p></td>
+<td><p>Jointcal does not work with pytest</p></td>
+<td><p>2017-08-23T13:16Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11620">DM-11620</a></p></td>
+<td><p>Numerical problem with Gaussian test in meas_base with pytest</p></td>
+<td><p>2017-08-31T21:57Z</p></td>
+<td><p>ip_diffim, meas_algorithms, meas_base, meas_modelfit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11629">DM-11629</a></p></td>
+<td><p>Fix typo in __init__.py filename in verify discovered by pytest</p></td>
+<td><p>2017-08-23T17:17Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11639">DM-11639</a></p></td>
+<td><p>Port verify_metrics package documentation to Sphinx</p></td>
+<td><p>2017-08-28T13:36Z</p></td>
+<td><p>verify_metrics</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11649">DM-11649</a></p></td>
+<td><p>Enable flake8 tests in utils package</p></td>
+<td><p>2017-08-28T17:37Z</p></td>
+<td><p>utils</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11653">DM-11653</a></p></td>
+<td><p>Make obs_ctio0m9, obs_comCam and ci_ctio0m9 py3 compliant</p></td>
+<td><p>2017-10-03T16:28Z</p></td>
+<td><p>obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11658">DM-11658</a></p></td>
+<td><p>Enable flake8 testing in pex_exceptions</p></td>
+<td><p>2017-08-26T14:33Z</p></td>
+<td><p>pex_exceptions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11660">DM-11660</a></p></td>
+<td><p>Enable flake8 testing in the log package</p></td>
+<td><p>2017-08-28T18:16Z</p></td>
+<td><p>log</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11661">DM-11661</a></p></td>
+<td><p>Enable flake8 testing in daf_base</p></td>
+<td><p>2017-08-28T18:15Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11662">DM-11662</a></p></td>
+<td><p>Enable flake8 testing in pex_policy</p></td>
+<td><p>2017-08-28T18:15Z</p></td>
+<td><p>pex_policy</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11663">DM-11663</a></p></td>
+<td><p>Enable flake8 testing in pex_config</p></td>
+<td><p>2017-08-30T01:47Z</p></td>
+<td><p>pex_config</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11664">DM-11664</a></p></td>
+<td><p>Enable flake8 testing in daf_persistence</p></td>
+<td><p>2017-08-28T22:15Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11691">DM-11691</a></p></td>
+<td><p>Test failure with butler in obs_sdss</p></td>
+<td><p>2017-08-30T18:11Z</p></td>
+<td><p>obs_sdss</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11700">DM-11700</a></p></td>
+<td><p>Fix non ascii docstring in pipe_base</p></td>
+<td><p>2017-08-29T23:21Z</p></td>
+<td><p>pipe_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11701">DM-11701</a></p></td>
+<td><p>Promote FitDonutTask to a CmdLineTask</p></td>
+<td><p>2017-09-22T21:19Z</p></td>
+<td><p>obs_base, obs_subaru</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11735">DM-11735</a></p></td>
+<td><p>fix tearDown race conditions in obs_test</p></td>
+<td><p>2017-08-30T21:09Z</p></td>
+<td><p>obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11764">DM-11764</a></p></td>
+<td><p>Fix pickling support in daf_base for pybind11 2.2.0</p></td>
+<td><p>2017-09-06T20:25Z</p></td>
+<td><p>daf_base</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11771">DM-11771</a></p></td>
+<td><p>obs_base fails to build on NFS-mounted systems</p></td>
+<td><p>2017-09-05T16:42Z</p></td>
+<td><p>daf_persistence, obs_base</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11790">DM-11790</a></p></td>
+<td><p>Move jointcal doc to DMTN-36</p></td>
+<td><p>2017-09-18T19:02Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11809">DM-11809</a></p></td>
+<td><p>Explicitly enable pep8-naming tests</p></td>
+<td><p>2017-09-07T00:03Z</p></td>
+<td><p>base, flake8, meas_base, utils, verify</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11810">DM-11810</a></p></td>
+<td><p>meas_algorithms fails on NFS-mounted systems</p></td>
+<td><p>2017-09-06T05:00Z</p></td>
+<td><p>meas_algorithms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11861">DM-11861</a></p></td>
+<td><p>SqlRegistry raising exception due to missing super.__del__</p></td>
+<td><p>2017-09-12T01:00Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11862">DM-11862</a></p></td>
+<td><p>writeFitsCatalogStorage calls obj.writeFits incorrectly</p></td>
+<td><p>2017-09-08T17:49Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11885">DM-11885</a></p></td>
+<td><p>look in daf_persistence for python2-style calls to super() and replace with python 3 style calls.</p></td>
+<td><p>2017-09-15T15:32Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11905">DM-11905</a></p></td>
+<td><p>Fix PhotoCalib defintion to use multiplication</p></td>
+<td><p>2017-10-10T23:54Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11916">DM-11916</a></p></td>
+<td><p>Warnings “Extent2I object has no attribute getWidth” when running meas_mosaic, jointcal</p></td>
+<td><p>2017-09-14T20:26Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11917">DM-11917</a></p></td>
+<td><p>Error in coaddDriver following compression changes</p></td>
+<td><p>2017-09-14T22:43Z</p></td>
+<td><p>pipe_drivers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11927">DM-11927</a></p></td>
+<td><p>Set maxOffsetPix consistently</p></td>
+<td><p>2017-09-19T19:33Z</p></td>
+<td><p>obs_subaru</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11929">DM-11929</a></p></td>
+<td><p>add <cite>from builtins import super</cite> to registries.py</p></td>
+<td><p>2017-09-15T20:33Z</p></td>
+<td><p>daf_persistence</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11933">DM-11933</a></p></td>
+<td><p>Run SafeClip and CompareWarp in mockCoadd.py</p></td>
+<td><p>2017-09-27T18:54Z</p></td>
+<td><p>pipe_tasks</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11951">DM-11951</a></p></td>
+<td><p>Fixes in AL Decorrelation and Zogy</p></td>
+<td><p>2017-09-20T23:03Z</p></td>
+<td><p>ip_diffim, pipe_tasks</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-11957">DM-11957</a></p></td>
+<td><p>Cannot round-trip &gt;7th degree Chebyshev photometry models</p></td>
+<td><p>2017-10-03T21:14Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12025">DM-12025</a></p></td>
+<td><p>Make Transform pickleable</p></td>
+<td><p>2017-10-12T03:01Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12029">DM-12029</a></p></td>
+<td><p>recompress jointcal’s testdata zeroed images with fpack</p></td>
+<td><p>2017-10-17T20:23Z</p></td>
+<td><p>jointcal, testdata_jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12040">DM-12040</a></p></td>
+<td><p>Errors in test_transformFactory.py</p></td>
+<td><p>2017-10-12T22:56Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12061">DM-12061</a></p></td>
+<td><p>Eliminate test warnings in test_methods.py</p></td>
+<td><p>2017-09-29T22:18Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12070">DM-12070</a></p></td>
+<td><p>Include obs_ctio0m9 and obs_comCam in lsst_distrib</p></td>
+<td><p>2017-10-04T14:43Z</p></td>
+<td><p>lsst_obs</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12085">DM-12085</a></p></td>
+<td><p>Camera geometry incorrect and outdated in obs_test</p></td>
+<td><p>2017-10-03T22:17Z</p></td>
+<td><p>obs_base, obs_test</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12102">DM-12102</a></p></td>
+<td><p>add input validation for SpherePoint(double, double, AngleUnits) constructor</p></td>
+<td><p>2017-10-04T20:58Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12176">DM-12176</a></p></td>
+<td><p>Minor improvements to afwDisplay interface</p></td>
+<td><p>2017-10-18T13:37Z</p></td>
+<td><p>afw</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12200">DM-12200</a></p></td>
+<td><p>jointcal tests fail when optional testdata_jointcal is not present</p></td>
+<td><p>2017-10-11T19:38Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12254">DM-12254</a></p></td>
+<td><p>Switch jointcal to default to IndexedRefObj instead of a.net</p></td>
+<td><p>2017-10-20T23:04Z</p></td>
+<td><p>jointcal</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12269">DM-12269</a></p></td>
+<td><p>Enable lsst.verify to subset specifications by a complete metadata match</p></td>
+<td><p>2017-10-19T22:47Z</p></td>
+<td><p>verify</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://jira.lsstcorp.org/browse/DM-12905">DM-12905</a></p></td>
+<td><p>install newer git from SCL RPM, not source, in JL container</p></td>
+<td><p>2017-10-05T00:29Z</p></td>
+<td><p>afw</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="v15_0_rc1.html" class="btn btn-neutral float-left" title="v15_0_rc1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="v13_0.html" class="btn btn-neutral float-right" title="v13_0" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016-2022 Association of Universities for Research in Astronomy, Inc. (AURA)..
+      <span class="lastupdated">Last updated on 2022-05-19 21:39 UTC.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
